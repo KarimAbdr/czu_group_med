@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book an appointment at MediCare Plus - Schedule your visit with our expert medical team.">
+  <title>Book Appointment - MediCare Plus</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="site-header">
+    <!-- Top bar with contact info -->
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <a href="tel:+1234567890" aria-label="Call us">📞 +1 (234) 567-890</a>
+            <a href="mailto:info@medicareplus.com" aria-label="Email us">✉️ info@medicareplus.com</a>
+          </div>
+          <div class="language-selector">
+            <span aria-hidden="true">🌐</span>
+            <select aria-label="Select language">
+              <option value="en">English</option>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main header with logo and navigation -->
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content">
+          <a href="./index.html" class="logo" aria-label="MediCare Plus">
+            <div class="logo-icon">M+</div>
+            <strong>MediCare Plus</strong>
+          </a>
+          
+          <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html" class="active" aria-current="page">Book</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          
+          <!-- Search form -->
+          <form class="search-form" role="search" action="./search-results.html" method="get">
+            <label for="search-input" class="sr-only">Search</label>
+            <input 
+              type="text" 
+              id="search-input" 
+              name="q" 
+              class="search-input" 
+              placeholder="Search..." 
+              aria-label="Search"
+            >
+            <button type="submit" class="search-button">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="./index.html">Home</a></li>
+          <li><span aria-current="page">Book Appointment</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    <section class="section" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title" class="section-title">Book Your Appointment</h1>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-2xl); color: var(--color-text-secondary);">
+          Schedule your visit in three easy steps
+        </p>
+        
+        <!-- Booking Form -->
+        <form class="form-section" style="max-width: 800px; margin: 0 auto;" id="bookingForm">
+          <!-- Step 1: Patient Information -->
+          <fieldset style="border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+            <legend style="padding: 0 var(--spacing-md); color: var(--color-primary); font-weight: 600;">
+              Step 1: Your Information
+            </legend>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="patient-first-name">
+                  First Name <span style="color: var(--color-error);">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="patient-first-name" 
+                  name="patient-first-name" 
+                  required 
+                  aria-required="true"
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="patient-last-name">
+                  Last Name <span style="color: var(--color-error);">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="patient-last-name" 
+                  name="patient-last-name" 
+                  required 
+                  aria-required="true"
+                >
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="patient-email">
+                  Email <span style="color: var(--color-error);">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="patient-email" 
+                  name="patient-email" 
+                  required 
+                  aria-required="true"
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="patient-phone">
+                  Phone <span style="color: var(--color-error);">*</span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="patient-phone" 
+                  name="patient-phone" 
+                  required 
+                  aria-required="true"
+                  placeholder="+1 (234) 567-890"
+                >
+              </div>
+            </div>
+          </fieldset>
+          
+          <!-- Step 2: Appointment Details -->
+          <fieldset style="border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+            <legend style="padding: 0 var(--spacing-md); color: var(--color-primary); font-weight: 600;">
+              Step 2: Appointment Details
+            </legend>
+            
+            <div class="form-group">
+              <label for="department">
+                Department <span style="color: var(--color-error);">*</span>
+              </label>
+              <select id="department" name="department" required aria-required="true">
+                <option value="">Select department</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="pediatrics">Pediatrics</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="emergency">Emergency</option>
+              </select>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appointment-date">
+                  Date <span style="color: var(--color-error);">*</span>
+                </label>
+                <input 
+                  type="date" 
+                  id="appointment-date" 
+                  name="appointment-date" 
+                  required 
+                  aria-required="true"
+                >
+                <small style="color: var(--color-text-secondary);">Must be future date</small>
+              </div>
+              
+              <div class="form-group">
+                <label for="appointment-time">
+                  Time <span style="color: var(--color-error);">*</span>
+                </label>
+                <select id="appointment-time" name="appointment-time" required aria-required="true">
+                  <option value="">Select time</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="reason-for-visit">
+                Reason for Visit <span style="color: var(--color-error);">*</span>
+              </label>
+              <textarea 
+                id="reason-for-visit" 
+                name="reason-for-visit" 
+                required 
+                aria-required="true"
+                placeholder="Briefly describe..."
+                style="min-height: 80px;"
+              ></textarea>
+            </div>
+          </fieldset>
+          
+          <!-- Step 3: Confirmation -->
+          <fieldset style="border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+            <legend style="padding: 0 var(--spacing-md); color: var(--color-primary); font-weight: 600;">
+              Step 3: Confirmation
+            </legend>
+            
+            <div class="form-group">
+              <label style="display: flex; align-items: flex-start; gap: var(--spacing-sm); cursor: pointer;">
+                <input 
+                  type="checkbox" 
+                  name="agree-terms" 
+                  id="agree-terms" 
+                  required 
+                  aria-required="true"
+                  style="margin-top: 4px;"
+                >
+                <span>I agree to the appointment terms and understand that I must provide 24 hours notice to cancel</span>
+              </label>
+            </div>
+          </fieldset>
+          
+          <!-- Message Display -->
+          <div id="errorMessage" style="background-color: #fee; border: 1px solid var(--color-error); color: var(--color-error); padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-lg); display: none;"></div>
+          
+          <div id="successMessage" style="background-color: #efe; border: 1px solid var(--color-success); color: var(--color-success); padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-lg); display: none;"></div>
+          
+          <!-- Submit Button -->
+          <div class="form-group text-center">
+            <button type="submit" class="submit-button" style="padding: var(--spacing-md) var(--spacing-3xl);">
+              Complete Booking
+            </button>
+            <p style="margin-top: var(--spacing-md); color: var(--color-text-secondary);">
+              You will receive SMS confirmation at the provided phone number
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Important Information -->
+    <aside class="section" style="background-color: var(--color-background-alt);" aria-labelledby="info-title">
+      <div class="container">
+        <h2 id="info-title" class="section-title">Before Your Visit</h2>
+        
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>📋 What to Bring</h3>
+            <ul style="margin-top: var(--spacing-md); padding-left: var(--spacing-lg); font-size: var(--font-size-sm);">
+              <li>Photo ID</li>
+              <li>Insurance card</li>
+              <li>Medications list</li>
+              <li>Medical records</li>
+            </ul>
+          </article>
+          
+          <article class="contact-card">
+            <h3>🕐 Arrival</h3>
+            <p>Please arrive 15 minutes early for check-in and paperwork.</p>
+          </article>
+          
+          <article class="contact-card">
+            <h3>❌ Cancellation</h3>
+            <p>Provide 24+ hours notice by calling <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+          </article>
+          
+          <article class="contact-card">
+            <h3>📞 Questions?</h3>
+            <p>Contact our coordinators at <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+          </article>
+        </div>
+      </div>
+    </aside>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Student Project Notice -->
+      <div class="student-project-notice">
+        <strong>⚠️ Academic Project:</strong> This is a student project for educational purposes only.
+      </div>
+      
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About</h3>
+          <p>Quality healthcare services with compassion and expertise since 2010.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html">Book</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="./doctors.html">Cardiology</a></li>
+            <li><a href="./doctors.html">Neurology</a></li>
+            <li><a href="./doctors.html">Pediatrics</a></li>
+            <li><a href="./doctors.html">Emergency</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <address style="font-style: normal;">
+            <p>123 Healthcare Ave<br>Medical District, MD 12345</p>
+            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p><a href="mailto:info@medicareplus.com">info@medicareplus.com</a></p>
+          </address>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 MediCare Plus | Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Booking form validation and SMS simulation
+    const bookingForm = document.getElementById('bookingForm');
+    const errorMessage = document.getElementById('errorMessage');
+    const successMessage = document.getElementById('successMessage');
+    const appointmentDateInput = document.getElementById('appointment-date');
+
+    // Set minimum date to today
+    const today = new Date();
+    today.setDate(today.getDate() + 1); // Prevent today's bookings
+    appointmentDateInput.min = today.toISOString().split('T')[0];
+
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Reset messages
+      errorMessage.style.display = 'none';
+      successMessage.style.display = 'none';
+
+      // Get form values
+      const firstName = document.getElementById('patient-first-name').value.trim();
+      const lastName = document.getElementById('patient-last-name').value.trim();
+      const email = document.getElementById('patient-email').value.trim();
+      const phone = document.getElementById('patient-phone').value.trim();
+      const appointmentDate = document.getElementById('appointment-date').value;
+      const appointmentTime = document.getElementById('appointment-time').value;
+      const agreeTerm = document.getElementById('agree-terms').checked;
+
+      // Validate inputs
+      if (!firstName || !lastName || !email || !phone || !appointmentDate || !appointmentTime || !agreeTerm) {
+        showError('Please fill in all required fields');
+        return;
+      }
+
+      // Validate date is in the future
+      const selectedDate = new Date(appointmentDate);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      if (selectedDate <= today) {
+        showError('Please select a future date');
+        return;
+      }
+
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showError('Please enter a valid email address');
+        return;
+      }
+
+      // Validate phone format
+      const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+      if (!phoneRegex.test(phone) || phone.length < 10) {
+        showError('Please enter a valid phone number');
+        return;
+      }
+
+      // Simulate SMS sending
+      simulateSMS(phone, firstName, appointmentDate, appointmentTime);
+
+      // Show success message
+      const departmentSelect = document.getElementById('department');
+      const selectedDept = departmentSelect.options[departmentSelect.selectedIndex].text;
+      
+      showSuccess(`Appointment booked successfully! SMS confirmation sent to ${phone}. Visit scheduled for ${appointmentDate} at ${appointmentTime} in ${selectedDept} department.`);
+
+      // Reset form
+      setTimeout(() => {
+        bookingForm.reset();
+        successMessage.style.display = 'none';
+      }, 5000);
+    });
+
+    function showError(message) {
+      errorMessage.textContent = '❌ ' + message;
+      errorMessage.style.display = 'block';
+      errorMessage.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showSuccess(message) {
+      successMessage.textContent = '✓ ' + message;
+      successMessage.style.display = 'block';
+      successMessage.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function simulateSMS(phone, name, date, time) {
+      // Simulate SMS sending (in real app, this would call a backend API)
+      console.log(`SMS Sent to ${phone}: Hi ${name}, your appointment is confirmed for ${date} at ${time}. Please arrive 15 minutes early. - MediCare Plus`);
+      
+      // Store in session storage as proof
+      const appointments = JSON.parse(sessionStorage.getItem('appointments') || '[]');
+      appointments.push({
+        name: name,
+        phone: phone,
+        date: date,
+        time: time,
+        sentAt: new Date().toLocaleString()
+      });
+      sessionStorage.setItem('appointments', JSON.stringify(appointments));
+    }
+  </script>
+</body>
+</html>
