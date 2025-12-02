@@ -176,200 +176,204 @@
   </script>
 
   <script>
-    // Helper functions
     const $ = (sel, root = document) => root.querySelector(sel);
     const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
     
-    // Get search data from JSON
-    const DATA = JSON.parse($('#searchData').textContent);
-    
-    // DOM elements
+    let DATA = { doctors: [], departments: [], services: [] };
+    try {
+        const rawData = $('#searchData');
+        if (rawData) {
+            DATA = JSON.parse(rawData.textContent);
+        } else {
+            console.error('Search data not found in the document.');
+        }
+    } catch (e) {
+        console.error('Ошибка парсинга JSON:', e);
+    }
+
+   
     const searchInput = $('#search-input');
     const resultsContainer = $('#resultsContainer');
     const resultsSummary = $('#resultsSummary');
     const filterButtons = $$('.filter-btn');
+
     
-    // State
     let currentFilter = 'all';
-    let currentQuery = '';
     
-    // Normalize search string
+    
     const normalize = (str) => (str || '').toLowerCase().trim();
-    
-    // Get URL parameter
-    const getParam = (name) => new URLSearchParams(location.search).get(name) || '';
-    
-    // Filter by type and query
+
+    const getParam = (name) => new URLSearchParams(window.location.search).get(name) || '';
+
     function searchData(query, filterType) {
-      const normalizedQuery = normalize(query);
-      let results = { doctors: [], departments: [], services: [] };
-      
-      if (!normalizedQuery) {
-        if (filterType === 'all' || filterType === 'doctors') results.doctors = DATA.doctors;
-        if (filterType === 'all' || filterType === 'departments') results.departments = DATA.departments;
-        if (filterType === 'all' || filterType === 'services') results.services = DATA.services;
+        const normalizedQuery = normalize(query);
+        
+        const queryTokens = normalizedQuery.split(/\s+/).filter(token => token.length > 0);
+
+        let results = { doctors: [], departments: [], services: [] };
+
+        if (queryTokens.length === 0) {
+             if (filterType === 'all' || filterType === 'doctors') results.doctors = DATA.doctors || [];
+             if (filterType === 'all' || filterType === 'departments') results.departments = DATA.departments || [];
+             if (filterType === 'all' || filterType === 'services') results.services = DATA.services || [];
+             return results;
+        }
+
+        const matchesQuery = (textToSearch) => {
+            if (!textToSearch) return false;
+            const normalizedText = normalize(textToSearch);
+            return queryTokens.every(token => normalizedText.includes(token));
+        };
+
+        if (filterType === 'all' || filterType === 'doctors') {
+            results.doctors = (DATA.doctors || []).filter(doc => {
+                const hay = `${doc.name} ${doc.department} ${doc.specialty} ${(doc.tags || []).join(' ')}`;
+                return matchesQuery(hay);
+            });
+        }
+
+        if (filterType === 'all' || filterType === 'departments') {
+            results.departments = (DATA.departments || []).filter(dept => {
+                const hay = `${dept.name} ${dept.desc} ${(dept.tags || []).join(' ')}`;
+                return matchesQuery(hay);
+            });
+        }
+
+        if (filterType === 'all' || filterType === 'services') {
+            results.services = (DATA.services || []).filter(serv => {
+                const hay = `${serv.name} ${serv.desc} ${serv.dept} ${(serv.tags || []).join(' ')}`;
+                return matchesQuery(hay);
+            });
+        }
+
         return results;
-      }
-      
-      // Search doctors
-      if (filterType === 'all' || filterType === 'doctors') {
-        results.doctors = DATA.doctors.filter(doc => {
-          const hay = (doc.name + ' ' + doc.department + ' ' + doc.specialty + ' ' + doc.tags.join(' ')).toLowerCase();
-          return hay.includes(normalizedQuery);
-        });
-      }
-      
-      // Search departments
-      if (filterType === 'all' || filterType === 'departments') {
-        results.departments = DATA.departments.filter(dept => {
-          const hay = (dept.name + ' ' + dept.desc + ' ' + dept.tags.join(' ')).toLowerCase();
-          return hay.includes(normalizedQuery);
-        });
-      }
-      
-      // Search services
-      if (filterType === 'all' || filterType === 'services') {
-        results.services = DATA.services.filter(serv => {
-          const hay = (serv.name + ' ' + serv.desc + ' ' + serv.tags.join(' ')).toLowerCase();
-          return hay.includes(normalizedQuery);
-        });
-      }
-      
-      return results;
     }
-    
-    // Highlight search term
+
     function highlightQuery(text, query) {
-      if (!query) return text;
-      try {
-        const regex = new RegExp(`(${normalize(query).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-        return text.replace(regex, '<mark class="highlight">$1</mark>');
-      } catch {
-        return text;
-      }
+        if (!query || !text) return text;
+        const normalizedQuery = normalize(query);
+        const tokens = normalizedQuery.split(/\s+/).filter(t => t.length > 0);
+        
+        if (tokens.length === 0) return text;
+
+        let highlightedText = text;
+        tokens.forEach(token => {
+            const safeToken = token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(`(${safeToken})`, 'gi');
+            highlightedText = highlightedText.replace(regex, '<mark class="highlight">$1</mark>');
+        });
+        
+        return highlightedText;
     }
-    
-    // Render results
+
     function renderResults(results, query) {
-      let html = '';
-      const totalResults = results.doctors.length + results.departments.length + results.services.length;
-      
-      // Update summary
-      if (query) {
-        resultsSummary.innerHTML = `<p class="results-meta">Found <strong>${totalResults} results</strong> for "${query}"</p>`;
-      } else {
-        resultsSummary.innerHTML = '';
-      }
-      
-      // No results
-      if (totalResults === 0) {
-        resultsContainer.innerHTML = `
-          <div class="no-results">
-            <p>No results found for "${query}"</p>
-            <p class="muted">Try different keywords or <a href="./doctors.html">browse all doctors</a></p>
-          </div>
-        `;
-        return;
-      }
-      
-      // Render doctors
-      if (results.doctors.length > 0) {
-        html += '<div class="results-section"><h2>Doctors</h2><div class="doctors-list">';
-        results.doctors.forEach(doc => {
-          html += `
+        let html = '';
+        const totalResults = results.doctors.length + results.departments.length + results.services.length;
+
+        if (query && query.trim().length > 0) {
+            resultsSummary.innerHTML = `<p class="results-meta">Найдено: <strong>${totalResults}</strong> по запросу "${query}"</p>`;
+        } else {
+            resultsSummary.innerHTML = '';
+        }
+
+        if (totalResults === 0 && query.trim().length > 0) {
+            resultsContainer.innerHTML = `
+                <div class="no-results">
+                    <p>No results found "${query}"</p>
+                    <p class="muted">Try different keywords or<a href="./doctors.html">list of all doctors</a></p>
+                </div>`;
+            return;
+        }
+
+        const renderSection = (title, items, renderer) => {
+            if (items.length === 0) return '';
+            return `<div class="results-section"><h2>${title}</h2><div class="${title === 'Doctors' ? 'doctors-list' : 'contact-grid'}">` +
+                   items.map(renderer).join('') + 
+                   `</div></div>`;
+        };
+
+        // Врачи
+        html += renderSection('Doctors', results.doctors, doc => `
             <article class="doctor-card">
-              <img src="${doc.image}" alt="${doc.name}" class="doctor-image">
+              <img src="${doc.image || 'placeholder.jpg'}" alt="${doc.name}" class="doctor-image">
               <div class="doctor-info">
                 <h3 class="doctor-name">${highlightQuery(doc.name, query)}</h3>
                 <span class="doctor-specialty">${highlightQuery(doc.department, query)}</span>
-                <p class="doctor-description">${doc.specialty}</p>
-                <div class="doctor-meta">
-                  <span>⭐ ${doc.experience}</span>
-                </div>
-                <p style="margin-top: var(--spacing-lg);">
-                  <a href="${doc.url}" class="button-secondary">View Profile</a>
-                </p>
+                <p class="doctor-description">${doc.specialty ? highlightQuery(doc.specialty, query) : ''}</p>
+                <div class="doctor-meta"><span>⭐ ${doc.experience || 'New'}</span></div>
+                <p style="margin-top: 1rem;"><a href="${doc.url || '#'}" class="button-secondary">Профиль</a></p>
               </div>
             </article>
-          `;
-        });
-        html += '</div></div>';
-      }
-      
-      // Render departments
-      if (results.departments.length > 0) {
-        html += '<div class="results-section"><h2>Departments</h2><div class="contact-grid">';
-        results.departments.forEach(dept => {
-          html += `
+        `);
+
+        // Отделения
+        html += renderSection('Departments', results.departments, dept => `
             <article class="contact-card">
-              <div style="font-size: 2rem; margin-bottom: var(--spacing-md);">${dept.icon}</div>
+              <div style="font-size: 2rem; margin-bottom: 1rem;">${dept.icon || '🏥'}</div>
               <h3>${highlightQuery(dept.name, query)}</h3>
               <p>${highlightQuery(dept.desc, query)}</p>
-              <p style="margin-top: var(--spacing-md);">
-                <a href="${dept.url}" class="button-secondary">Learn More</a>
-              </p>
+              <p style="margin-top: 1rem;"><a href="${dept.url || '#'}" class="button-secondary">Подробнее</a></p>
             </article>
-          `;
-        });
-        html += '</div></div>';
-      }
-      
-      // Render services
-      if (results.services.length > 0) {
-        html += '<div class="results-section"><h2>Services</h2><div class="contact-grid">';
-        results.services.forEach(serv => {
-          html += `
+        `);
+
+        html += renderSection('Services', results.services, serv => `
             <article class="contact-card">
               <h3>${highlightQuery(serv.name, query)}</h3>
-              <p><strong>${serv.dept}</strong></p>
+              <p><strong>${serv.dept || ''}</strong></p>
               <p>${highlightQuery(serv.desc, query)}</p>
-              <p style="margin-top: var(--spacing-md);">
-                <a href="./booking.html" class="button-secondary">Book Now</a>
-              </p>
+              <p style="margin-top: 1rem;"><a href="./booking.html" class="button-secondary">Записаться</a></p>
             </article>
-          `;
-        });
-        html += '</div></div>';
-      }
-      
-      resultsContainer.innerHTML = html;
+        `);
+
+        resultsContainer.innerHTML = html;
     }
-    
-    // Handle filter button clicks
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => {
-          b.classList.remove('active');
-          b.setAttribute('aria-pressed', 'false');
-        });
-        btn.classList.add('active');
-        btn.setAttribute('aria-pressed', 'true');
-        currentFilter = btn.dataset.type;
-        performSearch();
-      });
-    });
-    
-    // Perform search
+
+    function debounce(func, wait) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
+
     function performSearch() {
-      currentQuery = searchInput.value;
-      const results = searchData(currentQuery, currentFilter);
-      renderResults(results, currentQuery);
+        const query = searchInput.value;
+        const results = searchData(query, currentFilter);
+        renderResults(results, query);
     }
+
     
-    // Handle form submission
-    document.querySelector('.search-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      performSearch();
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
+            currentFilter = btn.dataset.type;
+            performSearch();
+        });
     });
-    
-    // Initial load
-    window.addEventListener('DOMContentLoaded', () => {
-      const urlQuery = getParam('q');
-      if (urlQuery) {
-        searchInput.value = urlQuery;
+
+    searchInput.addEventListener('input', debounce(() => {
         performSearch();
-      }
+    }, 300));
+
+    const searchForm = document.querySelector('.search-form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            performSearch();
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const urlQuery = getParam('q');
+        if (urlQuery) {
+            searchInput.value = urlQuery;
+        }
+        performSearch();
     });
-  </script>
-</body>
-</html>
+</script>
