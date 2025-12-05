@@ -378,7 +378,7 @@ Edit CSS variables in `styles.css`:
 
 ### Change Hospital Info
 Replace in all files:
-- Phone: +1 (234) 567-890
+- Phone: +420 111 111 111
 - Email: info@medicareplus.com
 - Address: 123 Healthcare Avenue...
 
@@ -469,4 +469,4 @@ This project includes:
 ---
 
 **Last Updated:** December 2, 2024
-**Team:** Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham
+**Team:** Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh

@@ -6,7 +6,7 @@
 - Aarush Wagdarikar
 - Karim Abdrakhmanov
 - Gulzada Oskonbaeva
-- Phong Pham
+- Phong Pham Minh
 
 **Course:** Web Design
 **Institution:** Czech University of Life Sciences Prague (CULS)
@@ -80,7 +80,7 @@ Homepage services grid contains 8 service cards with advanced CSS Grid:
 - Quick links section
 - Services section
 - Contact information
-- Author names: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham
+- Author names: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh
 - Visible academic project notice on all pages
 
 ### ✅ Booking System
@@ -252,7 +252,7 @@ All elements scale and adapt beautifully across devices.
 ## Contact & Support
 
 **Email:** info@medicareplus.com
-**Phone:** +1 (234) 567-890
+**Phone:** +420 111 111 111
 **Address:** 123 Healthcare Avenue, Medical District, MD 12345
 
 ---

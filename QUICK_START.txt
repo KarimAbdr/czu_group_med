@@ -200,7 +200,7 @@ Project created by:
   ✓ Aarush Wagdarikar
   ✓ Karim Abdrakhmanov
   ✓ Gulzada Oskonbaeva
-  ✓ Phong Pham
+  ✓ Phong Pham Minh
 
 💡 KEY IMPROVEMENTS INCLUDED:
 ─────────────────────────────────────────────────────────────────────

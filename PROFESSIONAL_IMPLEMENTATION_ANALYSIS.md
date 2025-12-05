@@ -477,4 +477,4 @@ This is now a **professional, scalable healthcare website** following industry b
 ---
 
 **Created:** December 2, 2024  
-**Team:** Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham
+**Team:** Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh

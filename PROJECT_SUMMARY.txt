@@ -8,7 +8,7 @@ TEAM MEMBERS:
 ✓ Aarush Wagdarikar
 ✓ Karim Abdrakhmanov
 ✓ Gulzada Oskonbaeva
-✓ Phong Pham
+✓ Phong Pham Minh
 
 PROJECT SCOPE:
 ─────────────────────────────────────────────────────────────────────────
@@ -250,7 +250,7 @@ QUICK START:
 7. Check footer for author credits
 
 Created: December 2, 2024
-Team: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham
+Team: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh
 
 ═══════════════════════════════════════════════════════════════════════════
                           PROJECT COMPLETE! ✅

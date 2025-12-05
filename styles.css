@@ -203,6 +203,7 @@ a:focus {
   justify-content: space-between;
   align-items: center;
   gap: var(--spacing-md);
+  position: relative;
 }
 
 .logo {
@@ -265,6 +266,10 @@ a:focus {
   width: 100%;
 }
 
+.nav-container {
+  display: none;
+}
+
 /* ========================================
    LANGUAGE SELECTOR
    ======================================== */
@@ -289,7 +294,7 @@ a:focus {
 .search-form {
   display: flex;
   gap: var(--spacing-sm);
-  max-width: 350px;
+  max-width: 300px;
   width: 100%;
 }
 
@@ -549,7 +554,7 @@ a:focus {
 
 .doctor-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: var(--color-background);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-lg);
@@ -564,14 +569,14 @@ a:focus {
 }
 
 .doctor-image {
-  width: 100%;
+  width: 160px;
   height: 250px;
   object-fit: cover;
   background-color: var(--color-background-alt);
 }
 
 .doctor-info {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -718,12 +723,15 @@ thead {
   color: white;
 }
 
-th,
-td {
+th, tr {
   padding: var(--spacing-md);
   text-align: left;
   border-bottom: 1px solid var(--color-border-light);
   font-size: var(--font-size-sm);
+}
+
+td {
+  padding: var(--spacing-md);
 }
 
 th {
@@ -800,6 +808,18 @@ textarea {
   .form-row .form-group {
     flex: 1;
   }
+
+  .nav-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+  .main-nav {
+    margin-left: 20px;
+  }
 }
 
 .submit-button {
@@ -842,6 +862,16 @@ textarea {
 @media (min-width: 1024px) {
   .contact-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .contact-card tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-card td {
+    text-wrap: nowrap;
+    padding: 0;
   }
 }
 
@@ -986,11 +1016,50 @@ textarea {
 }
 
 /* ========================================
+   MENU TOGGLE BUTTON
+   ======================================== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  gap: var(--spacing-xs);
+  position: absolute;
+  right: 5px;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  transition: all var(--transition-base);
+  border-radius: 1px;
+}
+
+.menu-toggle.active .menu-icon:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.menu-toggle.active .menu-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .menu-icon:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+/* ========================================
    RESPONSIVE UTILITIES
    ======================================== */
 @media (max-width: 767px) {
   .hide-mobile {
     display: none;
+  }
+  
+  .menu-toggle {
+    display: flex;
   }
   
   .main-nav ul {
@@ -1006,6 +1075,23 @@ textarea {
   .search-form {
     order: 3;
     width: 100%;
+  }
+  
+  .nav-container {
+    display: none;
+    order: 10;
+    width: 100%;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+  
+  .nav-container.active {
+    display: flex;
+  }
+
+  .site-footer .container {
+    text-align: center;
   }
 }
 
