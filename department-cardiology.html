@@ -85,18 +85,19 @@
   </div>
   
   <main id="main-content">
-    <!-- Department Hero -->
     <section class="hero" style="background: linear-gradient(135deg, #0066cc 0%, var(--color-secondary) 100%);" aria-labelledby="dept-title">
       <div class="container">
         <div class="hero-content">
-          <h1 id="dept-title">❤️ Cardiology</h1>
+          <h1 id="dept-title" style="display: flex; align-items: center; gap: 15px;">
+            <img src="assets/heart.png" alt="Heart Icon" style="width: 50px; height: 50px;">
+            Cardiology
+          </h1>
           <p>Expert heart and vascular care with comprehensive diagnostic and treatment services</p>
           <a href="./booking.html" class="cta-button">Book a Consultation</a>
         </div>
       </div>
     </section>
     
-    <!-- Department Overview -->
     <section class="section" aria-labelledby="overview">
       <div class="container">
         <h2 id="overview" class="section-title">What We Treat</h2>
@@ -129,7 +130,6 @@
       </div>
     </section>
     
-    <!-- Our Team -->
     <section class="section" style="background-color: var(--color-background-alt);" aria-labelledby="team">
       <div class="container">
         <h2 id="team" class="section-title">Our Cardiologists</h2>
@@ -185,7 +185,6 @@
       </div>
     </section>
     
-    <!-- Procedures & Services -->
     <section class="section" aria-labelledby="procedures">
       <div class="container">
         <h2 id="procedures" class="section-title">Diagnostic Services</h2>
@@ -214,7 +213,6 @@
       </div>
     </section>
     
-    <!-- CTA Section -->
     <section class="section text-center" style="background-color: var(--color-background-alt);">
       <div class="container">
         <h2 class="section-title">Schedule Your Appointment</h2>
@@ -226,11 +224,7 @@
   
   <footer class="site-footer">
     <div class="container">
-      <div class="student-project-notice">
-        <strong>⚠️ Academic Project:</strong> This is a student project for educational purposes only.
-      </div>
-      
-      <div class="footer-content">
+    <div class="footer-content">
         <div class="footer-section">
           <h3>About</h3>
           <p>Quality healthcare services with compassion and expertise since 2010.</p>
@@ -275,7 +269,6 @@
   </footer>
 
   <script>
-    // Menu toggle functionality
     const menuToggle = document.getElementById('menu-toggle');
     const navContainer = document.getElementById('nav-container');
     
@@ -283,12 +276,10 @@
       menuToggle.classList.toggle('active');
       navContainer.classList.toggle('active');
       
-      // Update aria-expanded attribute for accessibility
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
     });
     
-    // Close menu when a link is clicked
     const navLinks = navContainer.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {

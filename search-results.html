@@ -8,12 +8,9 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <!-- Header -->
   <header class="site-header">
-    <!-- Top bar with contact info -->
     <div class="header-top">
       <div class="container">
         <div class="header-top-content">
@@ -34,7 +31,6 @@
       </div>
     </div>
     
-    <!-- Main header with logo and navigation -->
     <div class="header-main">
       <div class="container">
         <div class="header-main-content">
@@ -59,7 +55,6 @@
               </ul>
             </nav>
             
-            <!-- Search form -->
             <form class="search-form" role="search" action="./search-results.html" method="get">
               <label for="search-input" class="sr-only">Search</label>
               <input 
@@ -78,7 +73,6 @@
     </div>
   </header>
   
-  <!-- Breadcrumb Navigation -->
   <div class="breadcrumb">
     <div class="container">
       <nav aria-label="Breadcrumb">
@@ -90,7 +84,6 @@
     </div>
   </div>
   
-  <!-- Main Content -->
   <main id="main-content">
     <section class="section" aria-labelledby="results-title">
       <div class="container">
@@ -103,10 +96,9 @@
     </section>
   </main>
   
-  <!-- Footer -->
+
   <footer class="site-footer">
     <div class="container">
-      <!-- Student Project Notice -->
       <div class="student-project-notice">
         <strong>⚠️ Academic Project:</strong> This is a student project for educational purposes only.
       </div>
@@ -156,7 +148,6 @@
   </footer>
 
   <script>
-    // Search database with pages, doctors, departments, and services
     const searchDatabase = {
       doctors: [
         {
@@ -256,7 +247,6 @@
       const container = document.getElementById('searchResultsContainer');
       const resultsTitle = document.getElementById('results-title');
 
-      // Update the search input
       document.getElementById('search-input').value = query;
       resultsTitle.textContent = query ? `Search Results for "${query}"` : 'Search Results';
 
@@ -274,25 +264,21 @@
         return queryTokens.every(token => normalizedText.includes(token));
       };
 
-      // Search doctors
       const doctorResults = searchDatabase.doctors.filter(doc => {
         const hay = `${doc.name} ${doc.specialty} ${doc.department} ${doc.description} ${(doc.tags || []).join(' ')}`;
         return matchesQuery(hay);
       });
 
-      // Search departments
       const deptResults = searchDatabase.departments.filter(dept => {
         const hay = `${dept.name} ${dept.description} ${(dept.tags || []).join(' ')}`;
         return matchesQuery(hay);
       });
 
-      // Search services
       const serviceResults = searchDatabase.services.filter(service => {
         const hay = `${service.name} ${service.dept} ${service.description} ${(service.tags || []).join(' ')}`;
         return matchesQuery(hay);
       });
 
-      // Search pages
       const pageResults = searchDatabase.pages.filter(page => {
         const hay = `${page.name} ${page.description} ${(page.tags || []).join(' ')}`;
         return matchesQuery(hay);
@@ -300,7 +286,6 @@
 
       const totalResults = doctorResults.length + deptResults.length + serviceResults.length + pageResults.length;
 
-      // Display results
       if (totalResults === 0) {
         container.innerHTML = '<p class="text-center" style="color: var(--color-text-secondary);">No results found. Try different keywords or <a href="./doctors.html">browse all doctors</a></p>';
         return;
@@ -308,7 +293,6 @@
 
       let html = `<p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-xl);">Found <strong>${totalResults} results</strong></p>`;
 
-      // Display doctor results
       if (doctorResults.length > 0) {
         html += '<h2 style="margin-top: var(--spacing-2xl); margin-bottom: var(--spacing-lg);">Doctors</h2>';
         html += '<div class="doctors-list">';
@@ -333,7 +317,6 @@
         html += '</div>';
       }
 
-      // Display department results
       if (deptResults.length > 0) {
         html += '<h2 style="margin-top: var(--spacing-2xl); margin-bottom: var(--spacing-lg);">Departments</h2>';
         html += '<div class="contact-grid">';
@@ -352,7 +335,6 @@
         html += '</div>';
       }
 
-      // Display service results
       if (serviceResults.length > 0) {
         html += '<h2 style="margin-top: var(--spacing-2xl); margin-bottom: var(--spacing-lg);">Services</h2>';
         html += '<div class="contact-grid">';
@@ -371,7 +353,6 @@
         html += '</div>';
       }
 
-      // Display page results
       if (pageResults.length > 0) {
         html += '<h2 style="margin-top: var(--spacing-2xl); margin-bottom: var(--spacing-lg);">Pages</h2>';
         html += '<div class="contact-grid">';
@@ -393,17 +374,14 @@
       container.innerHTML = html;
     }
 
-    // Perform search on page load
     performSearch();
 
-    // Handle search form submission
     document.querySelector('.search-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const query = document.getElementById('search-input').value;
       window.location.href = `./search-results.html?q=${encodeURIComponent(query)}`;
     });
 
-    // Menu toggle functionality
     const menuToggle = document.getElementById('menu-toggle');
     const navContainer = document.getElementById('nav-container');
     
@@ -411,12 +389,10 @@
       menuToggle.classList.toggle('active');
       navContainer.classList.toggle('active');
       
-      // Update aria-expanded attribute for accessibility
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
     });
     
-    // Close menu when a link is clicked
     const navLinks = navContainer.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {

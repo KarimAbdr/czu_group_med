@@ -89,7 +89,6 @@
       <div class="container">
         <h1 id="results-title" class="section-title">Search Results</h1>
         
-        <!-- Filter Bar -->
         <div class="filter-bar" role="tablist" aria-label="Filter results">
           <button type="button" class="filter-btn active" data-type="all" aria-pressed="true">All</button>
           <button type="button" class="filter-btn" data-type="doctors" aria-pressed="false">Doctors</button>
@@ -97,21 +96,15 @@
           <button type="button" class="filter-btn" data-type="services" aria-pressed="false">Services</button>
         </div>
 
-        <!-- Results Summary -->
         <div id="resultsSummary" class="results-summary"></div>
 
-        <!-- Results Container -->
         <div id="resultsContainer" class="search-results"></div>
       </div>
     </section>
   </main>
   
   <footer class="site-footer">
-    <div class="container">
-      <div class="student-project-notice">
-        <strong>⚠️ Academic Project:</strong> This is a student project for educational purposes only.
-      </div>
-      
+    <div class="container">  
       <div class="footer-content">
         <div class="footer-section">
           <h3>About</h3>
@@ -156,7 +149,6 @@
     </div>
   </footer>
 
-  <!-- JSON Data for Search -->
   <script id="searchData" type="application/json">
   {
     "doctors": [
@@ -197,7 +189,7 @@
             console.error('Search data not found in the document.');
         }
     } catch (e) {
-        console.error('Ошибка парсинга JSON:', e);
+        console.error('Parsing error:', e);
     }
 
    
@@ -280,7 +272,7 @@
         const totalResults = results.doctors.length + results.departments.length + results.services.length;
 
         if (query && query.trim().length > 0) {
-            resultsSummary.innerHTML = `<p class="results-meta">Найдено: <strong>${totalResults}</strong> по запросу "${query}"</p>`;
+            resultsSummary.innerHTML = `<p class="results-meta">Found: <strong>${totalResults}</strong> by request "${query}"</p>`;
         } else {
             resultsSummary.innerHTML = '';
         }
@@ -301,7 +293,6 @@
                    `</div></div>`;
         };
 
-        // Врачи
         html += renderSection('Doctors', results.doctors, doc => `
             <article class="doctor-card">
               <img src="${doc.image || 'placeholder.jpg'}" alt="${doc.name}" class="doctor-image">
@@ -310,18 +301,17 @@
                 <span class="doctor-specialty">${highlightQuery(doc.department, query)}</span>
                 <p class="doctor-description">${doc.specialty ? highlightQuery(doc.specialty, query) : ''}</p>
                 <div class="doctor-meta"><span>⭐ ${doc.experience || 'New'}</span></div>
-                <p style="margin-top: 1rem;"><a href="${doc.url || '#'}" class="button-secondary">Профиль</a></p>
+                <p style="margin-top: 1rem;"><a href="${doc.url || '#'}" class="button-secondary">Profile</a></p>
               </div>
             </article>
         `);
 
-        // Отделения
         html += renderSection('Departments', results.departments, dept => `
             <article class="contact-card">
               <div style="font-size: 2rem; margin-bottom: 1rem;">${dept.icon || '🏥'}</div>
               <h3>${highlightQuery(dept.name, query)}</h3>
               <p>${highlightQuery(dept.desc, query)}</p>
-              <p style="margin-top: 1rem;"><a href="${dept.url || '#'}" class="button-secondary">Подробнее</a></p>
+              <p style="margin-top: 1rem;"><a href="${dept.url || '#'}" class="button-secondary">Details</a></p>
             </article>
         `);
 
@@ -330,7 +320,7 @@
               <h3>${highlightQuery(serv.name, query)}</h3>
               <p><strong>${serv.dept || ''}</strong></p>
               <p>${highlightQuery(serv.desc, query)}</p>
-              <p style="margin-top: 1rem;"><a href="./booking.html" class="button-secondary">Записаться</a></p>
+              <p style="margin-top: 1rem;"><a href="./booking.html" class="button-secondary">Make an appointment</a></p>
             </article>
         `);
 
@@ -385,7 +375,6 @@
         performSearch();
     });
 
-    // Menu toggle functionality
     const menuToggle = document.getElementById('menu-toggle');
     const navContainer = document.getElementById('nav-container');
     
@@ -393,12 +382,10 @@
       menuToggle.classList.toggle('active');
       navContainer.classList.toggle('active');
       
-      // Update aria-expanded attribute for accessibility
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
     });
     
-    // Close menu when a link is clicked
     const navLinks = navContainer.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {

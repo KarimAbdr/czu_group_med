@@ -8,12 +8,9 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <!-- Header -->
   <header class="site-header">
-    <!-- Top bar with contact info -->
     <div class="header-top">
       <div class="container">
         <div class="header-top-content">
@@ -34,7 +31,6 @@
       </div>
     </div>
     
-    <!-- Main header with logo and navigation -->
     <div class="header-main">
       <div class="container">
         <div class="header-main-content">
@@ -59,7 +55,6 @@
               </ul>
             </nav>
             
-            <!-- Search form -->
             <form class="search-form" role="search" action="./search-results.html" method="get">
               <label for="search-input" class="sr-only">Search</label>
               <input 
@@ -78,7 +73,6 @@
     </div>
   </header>
   
-  <!-- Breadcrumb Navigation -->
   <div class="breadcrumb">
     <div class="container">
       <nav aria-label="Breadcrumb">
@@ -90,7 +84,6 @@
     </div>
   </div>
   
-  <!-- Main Content -->
   <main id="main-content">
     <section class="section" aria-labelledby="page-title">
       <div class="container">
@@ -99,9 +92,7 @@
           Schedule your visit in three easy steps
         </p>
         
-        <!-- Booking Form -->
         <form class="form-section" style="max-width: 800px; margin: 0 auto;" id="bookingForm">
-          <!-- Step 1: Patient Information -->
           <fieldset style="border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
             <legend style="padding: 0 var(--spacing-md); color: var(--color-primary); font-weight: 600;">
               Step 1: Your Information
@@ -165,7 +156,6 @@
             </div>
           </fieldset>
           
-          <!-- Step 2: Appointment Details -->
           <fieldset style="border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
             <legend style="padding: 0 var(--spacing-md); color: var(--color-primary); font-weight: 600;">
               Step 2: Appointment Details
@@ -232,7 +222,6 @@
             </div>
           </fieldset>
           
-          <!-- Step 3: Confirmation -->
           <fieldset style="border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
             <legend style="padding: 0 var(--spacing-md); color: var(--color-primary); font-weight: 600;">
               Step 3: Confirmation
@@ -253,12 +242,10 @@
             </div>
           </fieldset>
           
-          <!-- Message Display -->
           <div id="errorMessage" style="background-color: #fee; border: 1px solid var(--color-error); color: var(--color-error); padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-lg); display: none;"></div>
           
           <div id="successMessage" style="background-color: #efe; border: 1px solid var(--color-success); color: var(--color-success); padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-lg); display: none;"></div>
           
-          <!-- Submit Button -->
           <div class="form-group text-center">
             <button type="submit" class="submit-button" style="padding: var(--spacing-md) var(--spacing-3xl);">
               Complete Booking
@@ -271,7 +258,6 @@
       </div>
     </section>
     
-    <!-- Important Information -->
     <aside class="section" style="background-color: var(--color-background-alt);" aria-labelledby="info-title">
       <div class="container">
         <h2 id="info-title" class="section-title">Before Your Visit</h2>
@@ -306,14 +292,8 @@
     </aside>
   </main>
   
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <!-- Student Project Notice -->
-      <div class="student-project-notice">
-        <strong>⚠️ Academic Project:</strong> This is a student project for educational purposes only.
-      </div>
-      
+    <div class="container">  
       <div class="footer-content">
         <div class="footer-section">
           <h3>About</h3>
@@ -359,25 +339,21 @@
   </footer>
 
   <script>
-    // Booking form validation and SMS simulation
     const bookingForm = document.getElementById('bookingForm');
     const errorMessage = document.getElementById('errorMessage');
     const successMessage = document.getElementById('successMessage');
     const appointmentDateInput = document.getElementById('appointment-date');
 
-    // Set minimum date to today
     const today = new Date();
-    today.setDate(today.getDate() + 1); // Prevent today's bookings
+    today.setDate(today.getDate() + 1); 
     appointmentDateInput.min = today.toISOString().split('T')[0];
 
     bookingForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      // Reset messages
       errorMessage.style.display = 'none';
       successMessage.style.display = 'none';
 
-      // Get form values
       const firstName = document.getElementById('patient-first-name').value.trim();
       const lastName = document.getElementById('patient-last-name').value.trim();
       const email = document.getElementById('patient-email').value.trim();
@@ -386,13 +362,11 @@
       const appointmentTime = document.getElementById('appointment-time').value;
       const agreeTerm = document.getElementById('agree-terms').checked;
 
-      // Validate inputs
       if (!firstName || !lastName || !email || !phone || !appointmentDate || !appointmentTime || !agreeTerm) {
         showError('Please fill in all required fields');
         return;
       }
 
-      // Validate date is in the future
       const selectedDate = new Date(appointmentDate);
       const today = new Date();
       today.setHours(0, 0, 0, 0);
@@ -402,30 +376,25 @@
         return;
       }
 
-      // Validate email format
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         showError('Please enter a valid email address');
         return;
       }
 
-      // Validate phone format
       const phoneRegex = /^[\d\s\-\+\(\)]+$/;
       if (!phoneRegex.test(phone) || phone.length < 10) {
         showError('Please enter a valid phone number');
         return;
       }
 
-      // Simulate SMS sending
       simulateSMS(phone, firstName, appointmentDate, appointmentTime);
 
-      // Show success message
       const departmentSelect = document.getElementById('department');
       const selectedDept = departmentSelect.options[departmentSelect.selectedIndex].text;
       
       showSuccess(`Appointment booked successfully! SMS confirmation sent to ${phone}. Visit scheduled for ${appointmentDate} at ${appointmentTime} in ${selectedDept} department.`);
 
-      // Reset form
       setTimeout(() => {
         bookingForm.reset();
         successMessage.style.display = 'none';
@@ -445,10 +414,8 @@
     }
 
     function simulateSMS(phone, name, date, time) {
-      // Simulate SMS sending (in real app, this would call a backend API)
       console.log(`SMS Sent to ${phone}: Hi ${name}, your appointment is confirmed for ${date} at ${time}. Please arrive 15 minutes early. - MediCare Plus`);
       
-      // Store in session storage as proof
       const appointments = JSON.parse(sessionStorage.getItem('appointments') || '[]');
       appointments.push({
         name: name,
@@ -460,7 +427,6 @@
       sessionStorage.setItem('appointments', JSON.stringify(appointments));
     }
 
-    // Menu toggle functionality
     const menuToggle = document.getElementById('menu-toggle');
     const navContainer = document.getElementById('nav-container');
     
@@ -468,12 +434,10 @@
       menuToggle.classList.toggle('active');
       navContainer.classList.toggle('active');
       
-      // Update aria-expanded attribute for accessibility
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
     });
     
-    // Close menu when a link is clicked
     const navLinks = navContainer.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {

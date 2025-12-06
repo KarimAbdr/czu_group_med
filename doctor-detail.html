@@ -8,12 +8,9 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <!-- Header -->
   <header class="site-header">
-    <!-- Top bar with contact info -->
     <div class="header-top">
       <div class="container">
         <div class="header-top-content">
@@ -34,7 +31,6 @@
       </div>
     </div>
     
-    <!-- Main header with logo and navigation -->
     <div class="header-main">
       <div class="container">
         <div class="header-main-content">
@@ -59,7 +55,6 @@
               </ul>
             </nav>
             
-            <!-- Search form -->
             <form class="search-form" role="search" action="./search-results.html" method="get">
               <label for="search-input" class="sr-only">Search</label>
               <input 
@@ -78,7 +73,6 @@
     </div>
   </header>
   
-  <!-- Breadcrumb Navigation -->
   <div class="breadcrumb">
     <div class="container">
       <nav aria-label="Breadcrumb">
@@ -91,9 +85,7 @@
     </div>
   </div>
   
-  <!-- Main Content -->
   <main id="main-content">
-    <!-- Doctor Header -->
     <header class="detail-header">
       <div class="container">
         <div class="detail-hero">
@@ -127,7 +119,6 @@
       </div>
     </header>
     
-    <!-- Detailed Information -->
     <section class="section" aria-labelledby="expertise-title">
       <div class="container">
         <article>
@@ -182,7 +173,6 @@
       </div>
     </section>
     
-    <!-- Schedule Section -->
     <section class="section" style="background-color: var(--color-background-alt);" aria-labelledby="schedule-title">
       <div class="container">
         <h2 id="schedule-title">Available Hours</h2>
@@ -230,7 +220,6 @@
       </div>
     </section>
     
-    <!-- Reviews -->
     <aside class="section" aria-labelledby="reviews-title">
       <div class="container">
         <h2 id="reviews-title" class="section-title">Patient Reviews</h2>
@@ -260,15 +249,9 @@
     </aside>
   </main>
   
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <!-- Student Project Notice -->
-      <div class="student-project-notice">
-        <strong>⚠️ Academic Project:</strong> This is a student project for educational purposes only.
-      </div>
-      
-      <div class="footer-content">
+    <div class="footer-content">
         <div class="footer-section">
           <h3>About</h3>
           <p>Quality healthcare services with compassion and expertise since 2010.</p>
@@ -313,7 +296,6 @@
   </footer>
 
   <script>
-    // Menu toggle functionality
     const menuToggle = document.getElementById('menu-toggle');
     const navContainer = document.getElementById('nav-container');
     
@@ -321,12 +303,10 @@
       menuToggle.classList.toggle('active');
       navContainer.classList.toggle('active');
       
-      // Update aria-expanded attribute for accessibility
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
     });
     
-    // Close menu when a link is clicked
     const navLinks = navContainer.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {

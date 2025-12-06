@@ -8,12 +8,9 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <!-- Header -->
   <header class="site-header">
-    <!-- Top bar with contact info -->
     <div class="header-top">
       <div class="container">
         <div class="header-top-content">
@@ -34,7 +31,6 @@
       </div>
     </div>
     
-    <!-- Main header with logo and navigation -->
     <div class="header-main">
       <div class="container">
         <div class="header-main-content">
@@ -59,7 +55,6 @@
               </ul>
             </nav>
             
-            <!-- Search form -->
             <form class="search-form" role="search" action="./search-results.html" method="get">
               <label for="search-input" class="sr-only">Search</label>
               <input 
@@ -78,9 +73,7 @@
     </div>
   </header>
   
-  <!-- Main Content -->
   <main id="main-content">
-    <!-- Hero Section -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero-content">
@@ -92,7 +85,6 @@
       <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMGludGVyaW9yfGVufDB8fHx8MTc2NDc0MjY3Mnww&ixlib=rb-4.1.0&q=80&w=1080" alt="" class="hero-background" aria-hidden="true">
     </section>
     
-    <!-- Statistics Section (Flexbox) -->
     <section class="stats-section" aria-labelledby="stats-title">
       <div class="container">
         <h2 id="stats-title" class="sr-only">Our Achievements</h2>
@@ -117,80 +109,86 @@
       </div>
     </section>
     
-    <!-- Services/Departments Section (Grid Layout - 8+ items with different spans) -->
     <section class="section" aria-labelledby="services-title">
       <div class="container">
         <h2 id="services-title" class="section-title">Our Services</h2>
         
         <div class="services-grid">
-          <!-- Card 1 - Featured (spans 2x2) -->
           <article class="service-card">
-            <div class="service-icon">🏥</div>
+            <div class="service-icon">
+              <img src="assets/ambulance.png" alt="Emergency Care Icon" >
+            </div>
             <h3>Emergency Care</h3>
             <p>24/7 emergency services with rapid response team and state-of-the-art equipment</p>
             <a href="./contact.html">Learn More →</a>
           </article>
           
-          <!-- Card 2 -->
           <article class="service-card">
-            <div class="service-icon">❤️</div>
+            <div class="service-icon">
+              <img src="assets/heart.png" alt="Cardiology Icon" >
+            </div>
             <h3>Cardiology</h3>
             <p>Heart and vascular care from experienced specialists</p>
             <a href="department-cardiology.html">Learn More →</a>
           </article>
           
-          <!-- Card 3 -->
           <article class="service-card">
-            <div class="service-icon">🧠</div>
+            <div class="service-icon">
+              <img src="assets/neurology.png" alt="Neurology Icon" >
+            </div>
             <h3>Neurology</h3>
             <p>Expert neurological care and treatment</p>
             <a href="department-neurology.html">Learn More →</a>
           </article>
           
-          <!-- Card 4 -->
           <article class="service-card">
-            <div class="service-icon">🦴</div>
+            <div class="service-icon">
+              <img src="assets/orthopedic.png" alt="Orthopedics Icon" >
+            </div>
             <h3>Orthopedics</h3>
             <p>Joint and bone specialists</p>
             <a href="department-orthopedics.html">Learn More →</a>
           </article>
           
-          <!-- Card 5 - Featured (spans 2 columns) -->
           <article class="service-card">
-            <div class="service-icon">👶</div>
+            <div class="service-icon">
+              <img src="assets/pediatric.png" alt="Pediatrics Icon" >
+            </div>
             <h3>Pediatrics</h3>
             <p>Dedicated care for children from infancy through adolescence</p>
             <a href="department-pediatrics.html">Learn More →</a>
           </article>
           
-          <!-- Card 6 -->
           <article class="service-card">
-            <div class="service-icon">🔬</div>
+            <div class="service-icon">
+              <img src="assets/laboratory.png" alt="Laboratory Icon" >
+            </div>
             <h3>Laboratory</h3>
             <p>Advanced diagnostic testing</p>
             <a href="department-laboratory.html">Learn More →</a>
           </article>
           
-          <!-- Card 7 -->
           <article class="service-card">
-            <div class="service-icon">📊</div>
+            <div class="service-icon">
+              <img src="assets/radiology.png" alt="Imaging Icon" >
+            </div>
             <h3>Imaging</h3>
             <p>X-ray, MRI, CT scans</p>
             <a href="department-imaging.html">Learn More →</a>
           </article>
           
-          <!-- Card 8 -->
           <article class="service-card">
-            <div class="service-icon">💊</div>
+            <div class="service-icon">
+              <img src="assets/pharmacy.png" alt="Pharmacy Icon" >
+            </div>
             <h3>Pharmacy</h3>
             <p>Full pharmacy services</p>
-            <a href="department-pharmacy.html"">Learn More →</a>
+            <a href="department-pharmacy.html">Learn More →</a>
           </article>
         </div>
       </div>
     </section>
     
-    <!-- Why Choose Us Section -->
     <section class="section" style="background-color: var(--color-background-alt);" aria-labelledby="why-choose-title">
       <div class="container">
         <h2 id="why-choose-title" class="section-title">Why Choose Us</h2>
@@ -223,7 +221,6 @@
       </div>
     </section>
     
-    <!-- Call to Action -->
     <section class="section text-center">
       <div class="container">
         <h2 class="section-title">Ready to Get Started?</h2>
@@ -233,14 +230,8 @@
     </section>
   </main>
   
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <!-- Student Project Notice -->
-      <div class="student-project-notice">
-        <strong>⚠️ Academic Project:</strong> This is a student project for educational purposes only.
-      </div>
-      
       <div class="footer-content">
         <div class="footer-section">
           <h3>About</h3>
@@ -286,7 +277,6 @@
   </footer>
   
   <script>
-    // Menu toggle functionality
     const menuToggle = document.getElementById('menu-toggle');
     const navContainer = document.getElementById('nav-container');
     
@@ -294,12 +284,10 @@
       menuToggle.classList.toggle('active');
       navContainer.classList.toggle('active');
       
-      // Update aria-expanded attribute for accessibility
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
     });
     
-    // Close menu when a link is clicked
     const navLinks = navContainer.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
