@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All Medical Departments - MediCare Plus Healthcare Services">
+  <title>Departments - MediCare Plus</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <a href="tel:+420111111111" aria-label="Call us">📞 <span>+420 111 111 111</span></a>
+            <a href="mailto:info@medicareplus.com" aria-label="Email us">✉️ <span>info@medicareplus.com</span></a>
+          </div>
+          <div class="language-selector">
+            <span aria-hidden="true">🌐</span>
+            <select aria-label="Select language">
+              <option value="en">English</option>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content">
+          <a href="./index.html" class="logo" aria-label="MediCare Plus">
+            <div class="logo-icon">M+</div>
+            <strong>MediCare Plus</strong>
+          </a>
+          
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+          
+          <div class="nav-container" id="nav-container">
+            <nav class="main-nav" aria-label="Main navigation">
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./booking.html">Book</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+              </ul>
+            </nav>
+            
+            <form class="search-form" role="search" action="./search-results.html" method="get">
+              <label for="search-input" class="sr-only">Search</label>
+              <input 
+                type="text" 
+                id="search-input" 
+                name="q" 
+                class="search-input" 
+                placeholder="Search..." 
+                aria-label="Search"
+              >
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="./index.html">Home</a></li>
+          <li><span aria-current="page" id="breadcrumb-dept">Cardiology</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  
+  <main id="main-content">
+    <!-- CARDIOLOGY -->
+    <section id="cardiology" class="department-section">
+      <section class="hero" style="background: linear-gradient(135deg, #0066cc 0%, var(--color-secondary) 100%);" aria-labelledby="cardiology-title">
+        <div class="container">
+          <div class="hero-content">
+            <h1 id="cardiology-title" class="dept-hero-title">
+              <img src="assets/heart.png" alt="Heart Icon" class="dept-icon">
+              Cardiology
+            </h1>
+            <p>Expert heart and vascular care with comprehensive diagnostic and treatment services</p>
+            <a href="./booking.html" class="cta-button">Book a Consultation</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="cardiology-overview">
+        <div class="container">
+          <h2 id="cardiology-overview" class="section-title">What We Treat</h2>
+          
+          <div class="contact-grid">
+            <article class="contact-card">
+              <div class="contact-icon">📋</div>
+              <h3>Chest Pain</h3>
+              <p>Comprehensive evaluation of chest pain, including ECG, stress testing, and imaging to identify cardiac causes.</p>
+            </article>
+            
+            <article class="contact-card">
+              <div class="contact-icon">💓</div>
+              <h3>Hypertension</h3>
+              <p>Diagnosis and management of high blood pressure with personalized treatment plans and lifestyle modifications.</p>
+            </article>
+            
+            <article class="contact-card">
+              <div class="contact-icon">⚡</div>
+              <h3>Arrhythmia</h3>
+              <p>Treatment of irregular heartbeat including Holter monitoring and management protocols.</p>
+            </article>
+            
+            <article class="contact-card">
+              <div class="contact-icon">🫀</div>
+              <h3>Heart Failure</h3>
+              <p>Specialized care and monitoring for heart failure with evidence-based treatment approaches.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" class="alt-bg" aria-labelledby="cardiology-team">
+        <div class="container">
+          <h2 id="cardiology-team" class="section-title">Our Cardiologists</h2>
+          <p class="text-center" class="dept-intro text-center">
+            Meet our team of board-certified cardiologists specializing in heart and vascular care
+          </p>
+          
+          <div class="doctors-list">
+            <article class="doctor-card">
+              <img 
+                src="https://img.freepik.com/free-photo/female-doctor-hospital-with-stethoscope_23-2148827774.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="Dr. Sarah Mitchell"
+                class="doctor-image"
+              >
+              <div class="doctor-info">
+                <h3 class="doctor-name">Dr. Sarah Mitchell</h3>
+                <span class="doctor-specialty">Cardiology Specialist</span>
+                <p class="doctor-description">
+                  15+ years of experience in cardiovascular diagnostics and management
+                </p>
+                <div class="doctor-meta">
+                  <div class="meta-item">🎓 Harvard Medical School</div>
+                  <div class="meta-item">⭐ 4.9/5 Rating</div>
+                </div>
+                <p class="profile-action">
+                  <a href="./doctor-detail.html?id=sarah-mitchell" class="button-secondary">View Profile</a>
+                </p>
+              </div>
+            </article>
+            
+            <article class="doctor-card">
+              <img 
+                src="https://www.shutterstock.com/image-photo/healthcare-medical-staff-concept-portrait-600nw-2281024823.jpg"
+                alt="Dr. Thomas Harris"
+                class="doctor-image"
+              >
+              <div class="doctor-info">
+                <h3 class="doctor-name">Dr. Thomas Harris</h3>
+                <span class="doctor-specialty">Interventional Cardiology</span>
+                <p class="doctor-description">
+                  Specializes in cardiac catheterization and coronary interventions
+                </p>
+                <div class="doctor-meta">
+                  <div class="meta-item">🎓 Yale Medical School</div>
+                  <div class="meta-item">⭐ 4.8/5 Rating</div>
+                </div>
+                <p class="profile-action">
+                  <a href="./doctor-detail.html?id=thomas-harris" class="button-secondary">View Profile</a>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="cardiology-services">
+        <div class="container">
+          <h2 id="cardiology-services" class="section-title">Diagnostic Services</h2>
+          
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>📊 ECG</h3>
+              <p>Electrocardiogram for detecting heart rhythm and electrical abnormalities</p>
+            </article>
+            
+            <article class="contact-card">
+              <h3>🏃 Stress Testing</h3>
+              <p>Exercise or pharmacologic stress test to assess cardiac function under exertion</p>
+            </article>
+            
+            <article class="contact-card">
+              <h3>🔊 Echocardiography</h3>
+              <p>Ultrasound imaging of the heart to evaluate structure and function</p>
+            </article>
+            
+            <article class="contact-card">
+              <h3>📹 Holter Monitoring</h3>
+              <p>24-hour portable ECG monitoring to detect irregular heartbeats</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- NEUROLOGY -->
+    <section id="neurology" class="department-section">
+      <section class="hero" style="background: linear-gradient(135deg, #0066cc 0%, var(--color-secondary) 100%);" aria-labelledby="neurology-title">
+        <div class="container">
+          <div class="hero-content">
+            <h1 id="neurology-title" class="dept-hero-title">
+              <img src="assets/neurology.png" alt="Brain Icon" class="dept-icon">
+              Neurology
+            </h1>
+            <p>Specialized care for brain, spinal cord, and nervous system disorders</p>
+            <a href="./booking.html" class="cta-button">Book a Consultation</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="neurology-overview">
+        <div class="container">
+          <h2 id="neurology-overview" class="section-title">What We Treat</h2>
+          
+          <div class="contact-grid">
+            <article class="contact-card">
+              <div class="contact-icon">🤕</div>
+              <h3>Migraines & Headaches</h3>
+              <p>Diagnosis and treatment of migraines, tension headaches, and chronic pain conditions</p>
+            </article>
+            
+            <article class="contact-card">
+              <div class="contact-icon">⚡</div>
+              <h3>Epilepsy</h3>
+              <p>Comprehensive seizure management and long-term neurological care</p>
+            </article>
+            
+            <article class="contact-card">
+              <div class="contact-icon">🧬</div>
+              <h3>Movement Disorders</h3>
+              <p>Treatment of Parkinson's disease, tremors, and other movement conditions</p>
+            </article>
+            
+            <article class="contact-card">
+              <div class="contact-icon">🔄</div>
+              <h3>Stroke Recovery</h3>
+              <p>Post-stroke rehabilitation and prevention of future neurological events</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" class="alt-bg" aria-labelledby="neurology-team">
+        <div class="container">
+          <h2 id="neurology-team" class="section-title">Our Neurologists</h2>
+          <div class="doctors-list">
+            <article class="doctor-card">
+              <img src="https://media.sciencephoto.com/image/f0265219/800wm" alt="Dr. James Rodriguez" class="doctor-image">
+              <div class="doctor-info">
+                <h3 class="doctor-name">Dr. James Rodriguez</h3>
+                <span class="doctor-specialty">Neurology Specialist</span>
+                <p class="doctor-description">12+ years treating neurological disorders</p>
+                <div class="doctor-meta"><div class="meta-item">🎓 Johns Hopkins</div></div>
+                <p class="profile-action"><a href="./doctor-detail.html?id=james-rodriguez" class="button-secondary">View Profile</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="neurology-services">
+        <div class="container">
+          <h2 id="neurology-services" class="section-title">Diagnostic Tests</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>🧠 EEG</h3>
+              <p>Electroencephalogram to measure brain electrical activity</p>
+            </article>
+            <article class="contact-card">
+              <h3>🔬 EMG</h3>
+              <p>Electromyography to assess muscle and nerve function</p>
+            </article>
+            <article class="contact-card">
+              <h3>🔄 NCV</h3>
+              <p>Nerve conduction velocity testing for nerve disorders</p>
+            </article>
+            <article class="contact-card">
+              <h3>🖼️ MRI</h3>
+              <p>Magnetic resonance imaging of the brain and spinal cord</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- PEDIATRICS -->
+    <section id="pediatrics" class="department-section">
+      <section class="hero" style="background: linear-gradient(135deg, #0066cc 0%, var(--color-secondary) 100%);" aria-labelledby="pediatrics-title">
+        <div class="container">
+          <div class="hero-content">
+            <h1 id="pediatrics-title" class="dept-hero-title">
+              <img src="assets/pediatric.png" alt="Pediatric Icon" class="dept-icon">
+              Pediatrics
+            </h1>
+            <p>Compassionate child healthcare from infancy through adolescence</p>
+            <a href="./booking.html" class="cta-button">Book a Consultation</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="pediatrics-overview">
+        <div class="container">
+          <h2 id="pediatrics-overview" class="section-title">What We Offer</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <div class="contact-icon">🍼</div>
+              <h3>Newborn Care</h3>
+              <p>Comprehensive care for newborns including screening tests and developmental assessments</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">💉</div>
+              <h3>Vaccinations</h3>
+              <p>Complete immunization programs following recommended schedules</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">🤧</div>
+              <h3>Acute Illness</h3>
+              <p>Treatment of colds, flu, ear infections, and common childhood illnesses</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">📏</div>
+              <h3>Well-Child Visits</h3>
+              <p>Regular checkups and developmental monitoring throughout childhood</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" class="alt-bg" aria-labelledby="pediatrics-team">
+        <div class="container">
+          <h2 id="pediatrics-team" class="section-title">Our Pediatricians</h2>
+          <div class="doctors-list">
+            <article class="doctor-card">
+              <img src="https://png.pngtree.com/png-clipart/20250417/original/pngtree-female-doctor-portrait-in-white-png-image_20827701.png" alt="Dr. Emily Chen" class="doctor-image">
+              <div class="doctor-info">
+                <h3 class="doctor-name">Dr. Emily Chen</h3>
+                <span class="doctor-specialty">Pediatrician</span>
+                <p class="doctor-description">10+ years caring for children and families</p>
+                <div class="doctor-meta"><div class="meta-item">🎓 Stanford Medical School</div></div>
+                <p class="profile-action"><a href="./doctor-detail.html?id=emily-chen" class="button-secondary">View Profile</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="pediatrics-services">
+        <div class="container">
+          <h2 id="pediatrics-services" class="section-title">Services & Testing</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>🧬 Screening Tests</h3>
+              <p>Newborn metabolic and hearing screening</p>
+            </article>
+            <article class="contact-card">
+              <h3>🔬 Lab Work</h3>
+              <p>Blood tests and diagnostic testing for children</p>
+            </article>
+            <article class="contact-card">
+              <h3>📋 School Physicals</h3>
+              <p>Health examination and documentation for school enrollment</p>
+            </article>
+            <article class="contact-card">
+              <h3>🏃 Sports Physicals</h3>
+              <p>Medical clearance for school and recreational sports</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ORTHOPEDICS -->
+    <section id="orthopedics" class="department-section">
+      <section class="hero" style="background: linear-gradient(135deg, #0066cc 0%, var(--color-secondary) 100%);" aria-labelledby="orthopedics-title">
+        <div class="container">
+          <div class="hero-content">
+            <h1 id="orthopedics-title" class="dept-hero-title">
+              <img src="assets/orthopedic.png" alt="Bone icon" class="dept-icon">
+              Orthopedics
+            </h1>
+            <p>Expert bone, joint, and sports medicine care</p>
+            <a href="./booking.html" class="cta-button">Book a Consultation</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="orthopedics-overview">
+        <div class="container">
+          <h2 id="orthopedics-overview" class="section-title">What We Treat</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <div class="contact-icon">🤸</div>
+              <h3>Sports Injuries</h3>
+              <p>Treatment of athletic injuries including sprains, strains, and overuse conditions</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">⚽</div>
+              <h3>Joint Pain</h3>
+              <p>Comprehensive care for shoulder, knee, hip, and ankle joint problems</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">🪴</div>
+              <h3>Fractures</h3>
+              <p>Diagnosis and treatment of bone fractures with advanced surgical techniques</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">🧘</div>
+              <h3>Arthritis</h3>
+              <p>Management of osteoarthritis and rheumatoid arthritis</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" class="alt-bg" aria-labelledby="orthopedics-team">
+        <div class="container">
+          <h2 id="orthopedics-team" class="section-title">Our Orthopedic Specialists</h2>
+          <div class="doctors-list">
+            <article class="doctor-card">
+              <img src="https://www.shutterstock.com/image-photo/healthcare-medical-staff-concept-portrait-600nw-2281024823.jpg" alt="Dr. Michael Thompson" class="doctor-image">
+              <div class="doctor-info">
+                <h3 class="doctor-name">Dr. Michael Thompson</h3>
+                <span class="doctor-specialty">Orthopedic Surgeon</span>
+                <p class="doctor-description">18+ years in sports medicine and joint surgery</p>
+                <div class="doctor-meta"><div class="meta-item">🎓 Yale Medical School</div></div>
+                <p class="profile-action"><a href="./doctor-detail.html?id=michael-thompson" class="button-secondary">View Profile</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="orthopedics-services">
+        <div class="container">
+          <h2 id="orthopedics-services" class="section-title">Services & Procedures</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>🔍 Arthroscopy</h3>
+              <p>Minimally invasive joint exploration and treatment</p>
+            </article>
+            <article class="contact-card">
+              <h3>💉 Injections</h3>
+              <p>Cortisone and platelet-rich plasma injections for joint pain</p>
+            </article>
+            <article class="contact-card">
+              <h3>🏥 Surgery</h3>
+              <p>Advanced orthopedic surgical procedures</p>
+            </article>
+            <article class="contact-card">
+              <h3>🏋️ Rehabilitation</h3>
+              <p>Post-operative therapy and strength training</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- LABORATORY -->
+    <section id="laboratory" class="department-section">
+      <section class="hero" style="background: linear-gradient(135deg, #ff6b35 0%, var(--color-secondary) 100%);" aria-labelledby="laboratory-title">
+        <div class="container">
+          <div class="hero-content">
+            <h1 id="laboratory-title" class="dept-hero-title">
+              <img src="assets/laboratory.png" alt="Laboratory Icon" class="dept-icon">
+              Laboratory
+            </h1>
+            <p>Advanced diagnostic testing with precise and reliable results</p>
+            <a href="./booking.html" class="cta-button">Order Tests</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="laboratory-overview">
+        <div class="container">
+          <h2 id="laboratory-overview" class="section-title">What We Test</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <div class="contact-icon">🩸</div>
+              <h3>Blood Tests</h3>
+              <p>Complete blood count, chemistry panels, and specialized blood work analysis</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">⚗️</div>
+              <h3>Chemistry Analysis</h3>
+              <p>Liver function, kidney function, glucose, and metabolic panels</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">🧫</div>
+              <h3>Microbiology</h3>
+              <p>Bacterial and viral cultures for infection diagnosis</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">🧬</div>
+              <h3>Genetic Testing</h3>
+              <p>DNA analysis and hereditary condition screening</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" class="alt-bg" aria-labelledby="laboratory-team">
+        <div class="container">
+          <h2 id="laboratory-team" class="section-title">Our Lab Specialists</h2>
+          <div class="doctors-list">
+            <article class="doctor-card">
+              <img src="https://media.sciencephoto.com/image/f0265219/800wm" alt="Dr. Robert Martinez" class="doctor-image">
+              <div class="doctor-info">
+                <h3 class="doctor-name">Dr. Robert Martinez</h3>
+                <span class="doctor-specialty">Clinical Pathologist</span>
+                <p class="doctor-description">16+ years in diagnostic laboratory medicine</p>
+                <div class="doctor-meta"><div class="meta-item">🎓 Johns Hopkins Medical School</div></div>
+                <p class="profile-action"><a href="./doctor-detail.html?id=robert-martinez" class="button-secondary">View Profile</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="laboratory-services">
+        <div class="container">
+          <h2 id="laboratory-services" class="section-title">Testing Services</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>🩺 Comprehensive Health Panel</h3>
+              <p>Full health screening with all major laboratory tests</p>
+            </article>
+            <article class="contact-card">
+              <h3>💉 Immunology Tests</h3>
+              <p>Antibody testing and immune system evaluation</p>
+            </article>
+            <article class="contact-card">
+              <h3>🔍 Pathology Review</h3>
+              <p>Tissue analysis and histopathology examination</p>
+            </article>
+            <article class="contact-card">
+              <h3>⏱️ Rapid Results</h3>
+              <p>Same-day results for urgent diagnostic needs</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- IMAGING -->
+    <section id="imaging" class="department-section">
+      <section class="hero" style="background: linear-gradient(135deg, #00b4db 0%, var(--color-secondary) 100%);" aria-labelledby="imaging-title">
+        <div class="container">
+          <div class="hero-content">
+            <h1 id="imaging-title" class="dept-hero-title">
+              <img src="assets/radiology.png" class="dept-icon">
+              Imaging
+            </h1>
+            <p>State-of-the-art diagnostic imaging with expert radiologists</p>
+            <a href="./booking.html" class="cta-button">Schedule Imaging</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="imaging-overview">
+        <div class="container">
+          <h2 id="imaging-overview" class="section-title">Imaging Services</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <div class="contact-icon">🩻</div>
+              <h3>X-Ray</h3>
+              <p>Digital radiography for bones, chest, and general imaging needs</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">🧲</div>
+              <h3>MRI</h3>
+              <p>High-resolution magnetic resonance imaging for detailed soft tissue visualization</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">🔆</div>
+              <h3>CT Scan</h3>
+              <p>Advanced computed tomography for precise diagnostic imaging</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">🔊</div>
+              <h3>Ultrasound</h3>
+              <p>Non-invasive ultrasound imaging for organs, pregnancy, and vascular studies</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" class="alt-bg" aria-labelledby="imaging-team">
+        <div class="container">
+          <h2 id="imaging-team" class="section-title">Our Radiologists</h2>
+          <div class="doctors-list">
+            <article class="doctor-card">
+              <img src="https://www.shutterstock.com/image-photo/healthcare-medical-staff-concept-portrait-600nw-2281024823.jpg" alt="Dr. Nicholas Wright" class="doctor-image">
+              <div class="doctor-info">
+                <h3 class="doctor-name">Dr. Nicholas Wright</h3>
+                <span class="doctor-specialty">Diagnostic Radiologist</span>
+                <p class="doctor-description">19+ years in advanced diagnostic imaging</p>
+                <div class="doctor-meta"><div class="meta-item">🎓 Harvard Medical School</div></div>
+                <p class="profile-action"><a href="./doctor-detail.html?id=nicholas-wright" class="button-secondary">View Profile</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="imaging-services">
+        <div class="container">
+          <h2 id="imaging-services" class="section-title">Specialized Imaging</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>🫀 Cardiovascular Imaging</h3>
+              <p>Cardiac MRI and CT for heart and vessel evaluation</p>
+            </article>
+            <article class="contact-card">
+              <h3>🧠 Neuro Imaging</h3>
+              <p>Brain MRI and CT for neurological diagnosis</p>
+            </article>
+            <article class="contact-card">
+              <h3>🦴 Orthopedic Imaging</h3>
+              <p>High-resolution imaging for bone and joint conditions</p>
+            </article>
+            <article class="contact-card">
+              <h3>⚡ Interventional Radiology</h3>
+              <p>Minimally invasive guided procedures and biopsies</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- PHARMACY -->
+    <section id="pharmacy" class="department-section">
+      <section class="hero" style="background: linear-gradient(135deg, #00cc88 0%, var(--color-secondary) 100%);" aria-labelledby="pharmacy-title">
+        <div class="container">
+          <div class="hero-content">
+            <h1 id="pharmacy-title" class="dept-hero-title">
+              <img src="assets/laboratory.png" alt="Pharmacy Icon" class="dept-icon">
+              Pharmacy
+            </h1>
+            <p>Complete medication services with expert clinical guidance</p>
+            <a href="./booking.html" class="cta-button">Refill Prescription</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="pharmacy-overview">
+        <div class="container">
+          <h2 id="pharmacy-overview" class="section-title">Pharmacy Services</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <div class="contact-icon">💉</div>
+              <h3>Prescription Filling</h3>
+              <p>Fast and accurate prescription preparation with quality medications</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">🤝</div>
+              <h3>Medication Counseling</h3>
+              <p>Expert guidance on proper medication use and potential interactions</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">📦</div>
+              <h3>Delivery Service</h3>
+              <p>Convenient home delivery of medications to your door</p>
+            </article>
+            <article class="contact-card">
+              <div class="contact-icon">🏥</div>
+              <h3>Insurance Billing</h3>
+              <p>Seamless insurance coordination and billing assistance</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" class="alt-bg" aria-labelledby="pharmacy-team">
+        <div class="container">
+          <h2 id="pharmacy-team" class="section-title">Our Pharmacists</h2>
+          <div class="doctors-list">
+            <article class="doctor-card">
+              <img src="https://images.pexels.com/photos/19596247/pexels-photo-19596247.jpeg?cs=srgb&dl=pexels-martins-john-572778471-19596247.jpg&fm=jpg" alt="Dr. Patricia Lee" class="doctor-image">
+              <div class="doctor-info">
+                <h3 class="doctor-name">Dr. Patricia Lee</h3>
+                <span class="doctor-specialty">Clinical Pharmacist</span>
+                <p class="doctor-description">13+ years in pharmaceutical care and medication therapy management</p>
+                <div class="doctor-meta"><div class="meta-item">🎓 University of California Pharmacy School</div></div>
+                <p class="profile-action"><a href="./doctor-detail.html?id=patricia-lee" class="button-secondary">View Profile</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="pharmacy-services">
+        <div class="container">
+          <h2 id="pharmacy-services" class="section-title">Additional Services</h2>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>💊 Medication Reviews</h3>
+              <p>Comprehensive medication therapy management and optimization</p>
+            </article>
+            <article class="contact-card">
+              <h3>🩺 Immunizations</h3>
+              <p>Vaccines and preventive health injections available</p>
+            </article>
+            <article class="contact-card">
+              <h3>⏰ Refill Reminders</h3>
+              <p>Automatic refill notifications so you never run out</p>
+            </article>
+            <article class="contact-card">
+              <h3>🔬 Drug Interaction Screening</h3>
+              <p>Advanced screening to prevent harmful medication interactions</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="section text-center" class="alt-bg">
+      <div class="container">
+        <h2 class="section-title">Ready to Book an Appointment?</h2>
+        <p class="cta-text">Our specialists are here to provide expert care across all departments</p>
+        <a href="./booking.html" class="cta-button">Book Now</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-about">
+          <h3>About MediCare Plus</h3>
+          <p>Quality healthcare services with compassion and expertise since 2010.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html">Book Appointment</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>Patient Resources</h3>
+          <ul>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="preparation-guides.html">Preparation Guides</a></li>
+            <li><a href="privacy-policy.html">Privacy & Data Protection</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="./contact.html">Emergency</a></li>
+            <li><a href="./departments.html#cardiology">Cardiology</a></li>
+            <li><a href="./departments.html#neurology">Neurology</a></li>
+            <li><a href="./departments.html#pediatrics">Pediatrics</a></li>
+            <li><a href="./departments.html#pharmacy">Pharmacy</a></li>
+            <li><a href="./departments.html#imaging">Imaging</a></li>
+            <li><a href="./departments.html#laboratory">Laboratory</a></li>
+            <li><a href="./departments.html#orthopedics">Orthopedics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact & Hours</h3>
+          <address>
+            <p class="contact-item">
+              <span class="icon">📍</span>
+              <span>123 Healthcare Ave<br>Medical District, MD 12345</span>
+            </p>
+            <p class="contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:+420111111111">+420 111 111 111</a>
+            </p>
+            <p class="contact-item">
+              <span class="icon">✉️</span>
+              <a href="mailto:info@medicareplus.com">info@medicareplus.com</a>
+            </p>
+          </address>
+          
+          <div class="office-hours">
+            <h4>Office Hours</h4>
+            <p><strong>Mon-Fri:</strong> <br/>8:00 AM - 8:00 PM</p>
+            <p><strong>Sat:</strong> <br/>9:00 AM - 5:00 PM</p>
+            <p><strong>Sun:</strong> <br/>Closed</p>
+            <p class="emergency-note"><strong>Emergency:</strong> 24/7</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="student-project-notice">
+        <p><strong>📚 Student Project Notice:</strong> This website is a student project created for educational purposes.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        <p class="footer-authors">Created by: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh</p>
+      </div>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navContainer = document.getElementById('nav-container');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navContainer.classList.toggle('active');
+      
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    const navLinks = navContainer.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navContainer.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Department navigation and visibility
+    const departmentNames = {
+      'cardiology': 'Cardiology',
+      'neurology': 'Neurology',
+      'pediatrics': 'Pediatrics',
+      'orthopedics': 'Orthopedics',
+      'laboratory': 'Laboratory',
+      'imaging': 'Imaging',
+      'pharmacy': 'Pharmacy'
+    };
+
+    function showDepartment() {
+      const hash = window.location.hash.substring(1); // Remove the '#'
+      const sections = document.querySelectorAll('.department-section');
+      const breadcrumbDept = document.getElementById('breadcrumb-dept');
+      
+      // Remove active class from all sections
+      sections.forEach(section => section.classList.remove('active'));
+      
+      if (hash && departmentNames[hash]) {
+        // Show the selected department
+        const targetSection = document.getElementById(hash);
+        if (targetSection) {
+          targetSection.classList.add('active');
+          breadcrumbDept.textContent = departmentNames[hash];
+          
+          // Scroll to top of page
+          setTimeout(() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }, 200);
+        }
+      } else {
+        // No hash - show first department (cardiology) by default
+        const firstSection = sections[0];
+        if (firstSection) {
+          firstSection.classList.add('active');
+          breadcrumbDept.textContent = 'Cardiology';
+        }
+      }
+    }
+    
+    // Show department on page load
+    showDepartment();
+    
+    // Show department when hash changes
+    window.addEventListener('hashchange', showDepartment);
+  </script>
+</body>
+</html>

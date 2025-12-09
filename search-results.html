@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search results for doctors, departments, and services at MediCare Plus.">
+  <title>Search Results - MediCare Plus</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <a href="tel:+420111111111" aria-label="Call us">📞 <span>+420 111 111 111</span></a>
+            <a href="mailto:info@medicareplus.com" aria-label="Email us">✉️ <span>info@medicareplus.com</span></a>
+          </div>
+          <div class="language-selector">
+            <span aria-hidden="true">🌐</span>
+            <select aria-label="Select language">
+              <option value="en">English</option>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content">
+          <a href="./index.html" class="logo" aria-label="MediCare Plus">
+            <div class="logo-icon">M+</div>
+            <strong>MediCare Plus</strong>
+          </a>
+          
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+          
+          <div class ="nav-container" id="nav-container">
+            <nav class="main-nav" aria-label="Main navigation">
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./booking.html">Book</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+              </ul>
+            </nav>
+            
+            <form class="search-form" role="search" action="./search-results.html" method="get">
+              <label for="search-input" class="sr-only">Search</label>
+              <input 
+                type="text" 
+                id="search-input" 
+                name="q" 
+                class="search-input" 
+                placeholder="Search..." 
+                aria-label="Search"
+              >
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="./index.html">Home</a></li>
+          <li><span aria-current="page">Search Results</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  
+  <main id="main-content">
+    <section class="section" aria-labelledby="results-title">
+      <div class="container">
+        <h1 id="results-title" class="section-title">Search Results</h1>
+        
+        <div id="searchResultsContainer">
+          <p class="text-center" class="text-secondary">Loading...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-about">
+          <h3>About MediCare Plus</h3>
+          <p>Quality healthcare services with compassion and expertise since 2010.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html">Book Appointment</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>Patient Resources</h3>
+          <ul>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="preparation-guides.html">Preparation Guides</a></li>
+            <li><a href="privacy-policy.html">Privacy & Data Protection</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="./contact.html">Emergency</a></li>
+            <li><a href="./departments.html#cardiology">Cardiology</a></li>
+            <li><a href="./departments.html#neurology">Neurology</a></li>
+            <li><a href="./departments.html#pediatrics">Pediatrics</a></li>
+            <li><a href="./departments.html#pharmacy">Pharmacy</a></li>
+            <li><a href="./departments.html#imaging">Imaging</a></li>
+            <li><a href="./departments.html#laboratory">Laboratory</a></li>
+            <li><a href="./departments.html#orthopedics">Orthopedics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact & Hours</h3>
+          <address>
+            <p class="contact-item">
+              <span class="icon">📍</span>
+              <span>123 Healthcare Ave<br>Medical District, MD 12345</span>
+            </p>
+            <p class="contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:+420111111111">+420 111 111 111</a>
+            </p>
+            <p class="contact-item">
+              <span class="icon">✉️</span>
+              <a href="mailto:info@medicareplus.com">info@medicareplus.com</a>
+            </p>
+          </address>
+          
+          <div class="office-hours">
+            <h4>Office Hours</h4>
+            <p><strong>Mon-Fri:</strong> <br/>8:00 AM - 8:00 PM</p>
+            <p><strong>Sat:</strong> <br/>9:00 AM - 5:00 PM</p>
+            <p><strong>Sun:</strong> <br/>Closed</p>
+            <p class="emergency-note"><strong>Emergency:</strong> 24/7</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="student-project-notice">
+        <p><strong>📚 Student Project Notice:</strong> This website is a student project created for educational purposes.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        <p class="footer-authors">Created by: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh</p>
+      </div>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+  </footer>
+
+  <script>
+    const searchDatabase = {
+      doctors: [
+        {
+          name: 'Dr. Sarah Mitchell',
+          specialty: 'Cardiology',
+          department: 'Cardiology',
+          description: 'Expert cardiologist with 15+ years experience',
+          image: 'https://img.freepik.com/free-photo/female-doctor-hospital-with-stethoscope_23-2148827774.jpg?semt=ais_hybrid&w=740&q=80',
+          url: './doctor-detail.html?id=sarah-mitchell',
+          tags: ['cardiology', 'heart', 'vascular']
+        },
+        {
+          name: 'Dr. James Rodriguez',
+          specialty: 'Neurology',
+          department: 'Neurology',
+          description: 'Specialized in neurological disorders',
+          image: 'https://media.sciencephoto.com/image/f0265219/800wm',
+          url: './doctor-detail.html?id=james-rodriguez',
+          tags: ['neurology', 'brain', 'nervous']
+        },
+        {
+          name: 'Dr. Emily Chen',
+          specialty: 'Pediatrics',
+          department: 'Pediatrics',
+          description: 'Dedicated pediatric care specialist',
+          image: 'https://png.pngtree.com/png-clipart/20250417/original/pngtree-female-doctor-portrait-in-white-png-image_20827701.png',
+          url: './doctor-detail.html?id=emily-chen',
+          tags: ['pediatrics', 'children', 'care']
+        },
+        {
+          name: 'Dr. Michael Thompson',
+          specialty: 'Orthopedics',
+          department: 'Orthopedics',
+          description: 'Sports medicine and joint specialist',
+          image: 'https://www.shutterstock.com/image-photo/healthcare-medical-staff-concept-portrait-600nw-2281024823.jpg',
+          url: './doctor-detail.html?id=michael-thompson',
+          tags: ['orthopedics', 'joints', 'sports']
+        },
+        {
+          name: 'Dr. Lisa Anderson',
+          specialty: 'Emergency Medicine',
+          department: 'Emergency',
+          description: 'Emergency care and trauma specialist',
+          image: 'https://images.pexels.com/photos/19596247/pexels-photo-19596247.jpeg?cs=srgb&dl=pexels-martins-john-572778471-19596247.jpg&fm=jpg',
+          url: './doctor-detail.html?id=lisa-anderson',
+          tags: ['emergency', 'trauma', '24/7']
+        }
+      ],
+      departments: [
+        { name: 'Cardiology', description: 'Heart and vascular care', url: './departments.html#cardiology', icon: '❤️', tags: ['heart', 'cardio', 'vascular'] },
+        { name: 'Neurology', description: 'Brain and nervous system', url: './departments.html#neurology', icon: '🧠', tags: ['brain', 'neurology', 'nervous'] },
+        { name: 'Pediatrics', description: 'Child healthcare', url: './departments.html#pediatrics', icon: '👶', tags: ['pediatrics', 'children', 'infant'] },
+        { name: 'Orthopedics', description: 'Bone and joint care', url: './departments.html#orthopedics', icon: '🦴', tags: ['orthopedics', 'bones', 'joints'] },
+        { name: 'Laboratory', description: 'Advanced diagnostics', url: './departments.html#laboratory', icon: '🔬', tags: ['laboratory', 'tests', 'lab'] },
+        { name: 'Imaging', description: 'X-ray, MRI, CT scans', url: './departments.html#imaging', icon: '📸', tags: ['imaging', 'xray', 'mri', 'ct'] },
+        { name: 'Pharmacy', description: 'Pharmacy services', url: './departments.html#pharmacy', icon: '💊', tags: ['pharmacy', 'medications', 'drugs'] },
+        { name: 'Emergency', description: '24/7 emergency services', url: './index.html', icon: '🚑', tags: ['emergency', 'urgent', 'trauma'] }
+      ],
+      services: [
+        { name: 'Emergency Care', dept: 'Emergency', description: '24/7 emergency medical services with rapid response', tags: ['emergency', 'urgent'], url: './booking.html' },
+        { name: 'Cardiology Consultation', dept: 'Cardiology', description: 'Expert cardiac assessment and management', tags: ['cardiology', 'consultation'], url: './booking.html' },
+        { name: 'Neurology Evaluation', dept: 'Neurology', description: 'Comprehensive neurological assessment', tags: ['neurology', 'evaluation'], url: './booking.html' },
+        { name: 'Joint Surgery', dept: 'Orthopedics', description: 'Minimally invasive orthopedic procedures', tags: ['orthopedics', 'surgery'], url: './booking.html' },
+        { name: 'Pediatric Vaccination', dept: 'Pediatrics', description: 'Complete vaccination program for children', tags: ['pediatrics', 'vaccination'], url: './booking.html' }
+      ],
+      pages: [
+        { name: 'Home', description: 'Welcome to MediCare Plus', url: './index.html', icon: '🏠', tags: ['home', 'main', 'index'] },
+        { name: 'Doctors', description: 'Meet our team of expert doctors', url: './doctors.html', icon: '👨‍⚕️', tags: ['doctors', 'physicians', 'staff'] },
+        { name: 'Book Appointment', description: 'Schedule your appointment online', url: './booking.html', icon: '📅', tags: ['book', 'appointment', 'schedule', 'booking'] },
+        { name: 'Contact', description: 'Get in touch with us', url: './contact.html', icon: '📞', tags: ['contact', 'call', 'email', 'address'] },
+        { name: 'Cardiology', description: 'Cardiology department page', url: './departments.html#cardiology', icon: '❤️', tags: ['cardiology', 'heart', 'department'] },
+        { name: 'Neurology', description: 'Neurology department page', url: './departments.html#neurology', icon: '🧠', tags: ['neurology', 'brain', 'department'] },
+        { name: 'Orthopedics', description: 'Orthopedics department page', url: './departments.html#orthopedics', icon: '🦴', tags: ['orthopedics', 'bones', 'department'] },
+        { name: 'Pediatrics', description: 'Pediatrics department page', url: './departments.html#pediatrics', icon: '👶', tags: ['pediatrics', 'children', 'department'] },
+        { name: 'Laboratory', description: 'Laboratory department page', url: './departments.html#laboratory', icon: '🔬', tags: ['laboratory', 'lab', 'tests'] },
+        { name: 'Imaging', description: 'Imaging department page', url: './departments.html#imaging', icon: '📸', tags: ['imaging', 'xray', 'mri', 'ct'] },
+        { name: 'Pharmacy', description: 'Pharmacy department page', url: './departments.html#pharmacy', icon: '💊', tags: ['pharmacy', 'medications', 'drugs'] }
+      ]
+    };
+
+    const normalize = (str) => (str || '').toLowerCase().trim();
+
+    function highlightQuery(text, query) {
+      if (!query || !text) return text;
+      const tokens = query.toLowerCase().split(/\s+/).filter(t => t.length > 0);
+      let highlighted = text;
+      tokens.forEach(token => {
+        const regex = new RegExp(`(${token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+        highlighted = highlighted.replace(regex, '<mark class="highlight-text">$1</mark>');
+      });
+      return highlighted;
+    }
+
+    function performSearch() {
+      const params = new URLSearchParams(window.location.search);
+      const query = params.get('q') || '';
+      const container = document.getElementById('searchResultsContainer');
+      const resultsTitle = document.getElementById('results-title');
+
+      document.getElementById('search-input').value = query;
+      resultsTitle.textContent = query ? `Search Results for "${query}"` : 'Search Results';
+
+      // if (!query.trim()) {
+      //   container.innerHTML = '<p class="text-center" class="text-secondary">Please enter a search term</p>';
+      //   return;
+      // }
+
+      const lowerQuery = normalize(query);
+      const queryTokens = lowerQuery.split(/\s+/).filter(t => t.length > 0);
+
+      const matchesQuery = (text) => {
+        if (!text) return false;
+        const normalizedText = normalize(text);
+        return queryTokens.every(token => normalizedText.includes(token));
+      };
+
+      let doctorResults = searchDatabase.doctors.filter(doc => {
+        const hay = `${doc.name} ${doc.specialty} ${doc.department} ${doc.description} ${(doc.tags || []).join(' ')}`;
+        return matchesQuery(hay);
+      });
+
+      let deptResults = searchDatabase.departments.filter(dept => {
+        const hay = `${dept.name} ${dept.description} ${(dept.tags || []).join(' ')}`;
+        return matchesQuery(hay);
+      });
+
+      let serviceResults = searchDatabase.services.filter(service => {
+        const hay = `${service.name} ${service.dept} ${service.description} ${(service.tags || []).join(' ')}`;
+        return matchesQuery(hay);
+      });
+
+      let pageResults = searchDatabase.pages.filter(page => {
+        const hay = `${page.name} ${page.description} ${(page.tags || []).join(' ')}`;
+        return matchesQuery(hay);
+      });
+
+      const totalResults = doctorResults.length + deptResults.length + serviceResults.length + pageResults.length;
+      let html = '';
+      if (totalResults === 0) {
+        html = '<p class="text-center" class="text-center-secondary">No results found</p>';
+        doctorResults = searchDatabase.doctors;
+        deptResults = searchDatabase.departments;
+        serviceResults = searchDatabase.services;
+        pageResults = searchDatabase.pages;
+        html += '<h2 class="mt-2xl mb-lg">You might be interested in:</h2>';
+      } else {
+        html = `<p class="text-secondary mb-xl-center">Found <strong>${totalResults} results</strong></p>`;
+      }
+
+      if (doctorResults.length > 0) {
+        html += '<h2 class="mt-2xl mb-lg">Doctors</h2>';
+        html += '<div class="doctors-list">';
+        doctorResults.forEach(doctor => {
+          html += `
+            <article class="doctor-card">
+              <img src="${doctor.image}" alt="${doctor.name}" class="doctor-image">
+              <div class="doctor-info">
+                <h3 class="doctor-name">${highlightQuery(doctor.name, query)}</h3>
+                <span class="doctor-specialty">${highlightQuery(doctor.specialty, query)}</span>
+                <p class="doctor-description">${highlightQuery(doctor.description, query)}</p>
+                <div class="doctor-meta">
+                  <div class="meta-item">📍 ${doctor.department} Department</div>
+                </div>
+                <p class="profile-action">
+                  <a href="${doctor.url || './doctor-detail.html'}" class="button-secondary">View Profile</a>
+                </p>
+              </div>
+            </article>
+          `;
+        });
+        html += '</div>';
+      }
+
+      if (deptResults.length > 0) {
+        html += '<h2 class="mt-2xl mb-lg">Departments</h2>';
+        html += '<div class="contact-grid">';
+        deptResults.forEach(dept => {
+          html += `
+            <article class="contact-card">
+              <div class="icon-large">${dept.icon || '🏥'}</div>
+              <h3>${highlightQuery(dept.name, query)}</h3>
+              <p>${highlightQuery(dept.description, query)}</p>
+              <p class="mt-md">
+                <a href="${dept.url || './doctors.html'}" class="button-secondary">Learn More</a>
+              </p>
+            </article>
+          `;
+        });
+        html += '</div>';
+      }
+
+      if (serviceResults.length > 0) {
+        html += '<h2 class="mt-2xl mb-lg">Services</h2>';
+        html += '<div class="contact-grid">';
+        serviceResults.forEach(service => {
+          html += `
+            <article class="contact-card">
+              <h3>${highlightQuery(service.name, query)}</h3>
+              <p><strong>${service.dept}</strong></p>
+              <p>${highlightQuery(service.description, query)}</p>
+              <p class="mt-md">
+                <a href="${service.url || './booking.html'}" class="button-secondary">Book Now</a>
+              </p>
+            </article>
+          `;
+        });
+        html += '</div>';
+      }
+
+      if (pageResults.length > 0) {
+        html += '<h2 class="mt-2xl mb-lg">Pages</h2>';
+        html += '<div class="contact-grid">';
+        pageResults.forEach(page => {
+          html += `
+            <article class="contact-card">
+              <div class="icon-large">${page.icon || '📄'}</div>
+              <h3>${highlightQuery(page.name, query)}</h3>
+              <p>${highlightQuery(page.description, query)}</p>
+              <p class="mt-md">
+                <a href="${page.url || '#'}" class="button-secondary">Open Page</a>
+              </p>
+            </article>
+          `;
+        });
+        html += '</div>';
+      }
+
+      container.innerHTML = html;
+    }
+
+    performSearch();
+
+    document.querySelector('.search-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const query = document.getElementById('search-input').value;
+      window.location.href = `./search-results.html?q=${encodeURIComponent(query)}`;
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navContainer = document.getElementById('nav-container');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navContainer.classList.toggle('active');
+      
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    const navLinks = navContainer.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navContainer.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

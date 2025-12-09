@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Doctor profile and scheduling at MediCare Plus">
+  <title>Doctor Profile - MediCare Plus</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <a href="tel:+420111111111" aria-label="Call us">📞 <span>+420 111 111 111</span></a>
+            <a href="mailto:info@medicareplus.com" aria-label="Email us">✉️ <span>info@medicareplus.com</span></a>
+          </div>
+          <div class="language-selector">
+            <span aria-hidden="true">🌐</span>
+            <select aria-label="Select language">
+              <option value="en">English</option>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content">
+          <a href="./index.html" class="logo" aria-label="MediCare Plus">
+            <div class="logo-icon">M+</div>
+            <strong>MediCare Plus</strong>
+          </a>
+          
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+          
+          <div class ="nav-container" id="nav-container">
+            <nav class="main-nav" aria-label="Main navigation">
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./booking.html">Book</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+              </ul>
+            </nav>
+            
+            <form class="search-form" role="search" action="./search-results.html" method="get">
+              <label for="search-input" class="sr-only">Search</label>
+              <input 
+                type="text" 
+                id="search-input" 
+                name="q" 
+                class="search-input" 
+                placeholder="Search..." 
+                aria-label="Search"
+              >
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./doctors.html">Doctors</a></li>
+          <li><span aria-current="page">Dr. Sarah Mitchell</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  
+  <main id="main-content">
+    <header class="detail-header">
+      <div class="container">
+        <div class="detail-hero">
+          <div class="detail-image-container">
+            <img 
+              src="https://img.freepik.com/free-photo/female-doctor-hospital-with-stethoscope_23-2148827774.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="Dr. Sarah Mitchell"
+              class="detail-image"
+            >
+          </div>
+          
+          <div class="detail-info">
+            <h1 class="detail-title">Dr. Sarah Mitchell</h1>
+            <p class="detail-subtitle">Board-Certified Cardiologist</p>
+            
+            <div class="detail-badges">
+              <span class="badge">MD, Harvard</span>
+              <span class="badge">15+ Years</span>
+              <span class="badge">Board Certified</span>
+            </div>
+            
+            <p>
+              Highly respected cardiologist dedicated to providing excellent patient-centered care using evidence-based treatment approaches
+            </p>
+            
+            <p class="profile-action">
+              <a href="./booking.html" class="cta-button">Book Appointment</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <section class="section" aria-labelledby="expertise-title">
+      <div class="container">
+        <article>
+          <h2 id="expertise-title">Areas of Expertise</h2>
+          <ul class="indent-list">
+            <li>Preventive Cardiology</li>
+            <li>Cardiac Imaging</li>
+            <li>Heart Failure Management</li>
+            <li>Coronary Artery Disease</li>
+            <li>Hypertension Management</li>
+            <li>Arrhythmia Treatment</li>
+          </ul>
+        </article>
+        
+        <article class="mt-2xl">
+          <h2>Education</h2>
+          
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Year</th>
+                  <th scope="col">Degree</th>
+                  <th scope="col">Institution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2009 - Present</td>
+                  <td>Senior Cardiologist</td>
+                  <td>MediCare Plus</td>
+                </tr>
+                <tr>
+                  <td>2006 - 2009</td>
+                  <td>Cardiology Fellowship</td>
+                  <td>Massachusetts General Hospital</td>
+                </tr>
+                <tr>
+                  <td>2003 - 2006</td>
+                  <td>Internal Medicine</td>
+                  <td>Brigham & Women's</td>
+                </tr>
+                <tr>
+                  <td>1999 - 2003</td>
+                  <td>MD</td>
+                  <td>Harvard Medical School</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    <section class="section" class="alt-bg" aria-labelledby="schedule-title">
+      <div class="container">
+        <h2 id="schedule-title">Available Hours</h2>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monday</strong></td>
+                <td>9:00 AM - 12:00 PM, 2:00 PM - 5:00 PM</td>
+              </tr>
+              <tr>
+                <td><strong>Tuesday</strong></td>
+                <td>9:00 AM - 12:00 PM, 6:00 PM - 8:00 PM</td>
+              </tr>
+              <tr>
+                <td><strong>Wednesday</strong></td>
+                <td>9:00 AM - 12:00 PM, 2:00 PM - 5:00 PM</td>
+              </tr>
+              <tr>
+                <td><strong>Thursday</strong></td>
+                <td>2:00 PM - 5:00 PM, 6:00 PM - 8:00 PM</td>
+              </tr>
+              <tr>
+                <td><strong>Friday</strong></td>
+                <td>9:00 AM - 12:00 PM, 2:00 PM - 4:00 PM</td>
+              </tr>
+              <tr>
+                <td><strong>Saturday</strong></td>
+                <td>10:00 AM - 2:00 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p class="mt-lg text-center">
+          <a href="./booking.html" class="cta-button">Schedule Appointment</a>
+        </p>
+      </div>
+    </section>
+    
+    <aside class="section" aria-labelledby="reviews-title">
+      <div class="container">
+        <h2 id="reviews-title" class="section-title">Patient Reviews</h2>
+        
+        <div class="contact-grid">
+          <article class="contact-card">
+            <div class="text-accent mb-sm">
+              ★★★★★
+            </div>
+            <p class="text-italic text-secondary mb-md">
+              "Excellent care and very knowledgeable"
+            </p>
+            <p><strong>- John D.</strong></p>
+          </article>
+          
+          <article class="contact-card">
+            <div class="text-accent mb-sm">
+              ★★★★★
+            </div>
+            <p class="text-italic text-secondary mb-md">
+              "Professional and caring, highly recommend"
+            </p>
+            <p><strong>- Maria S.</strong></p>
+          </article>
+        </div>
+      </div>
+    </aside>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-about">
+          <h3>About MediCare Plus</h3>
+          <p>Quality healthcare services with compassion and expertise since 2010.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html">Book Appointment</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>Patient Resources</h3>
+          <ul>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="preparation-guides.html">Preparation Guides</a></li>
+            <li><a href="privacy-policy.html">Privacy & Data Protection</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="./contact.html">Emergency</a></li>
+            <li><a href="./departments.html#cardiology">Cardiology</a></li>
+            <li><a href="./departments.html#neurology">Neurology</a></li>
+            <li><a href="./departments.html#pediatrics">Pediatrics</a></li>
+            <li><a href="./departments.html#pharmacy">Pharmacy</a></li>
+            <li><a href="./departments.html#imaging">Imaging</a></li>
+            <li><a href="./departments.html#laboratory">Laboratory</a></li>
+            <li><a href="./departments.html#orthopedics">Orthopedics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact & Hours</h3>
+          <address>
+            <p class="contact-item">
+              <span class="icon">📍</span>
+              <span>123 Healthcare Ave<br>Medical District, MD 12345</span>
+            </p>
+            <p class="contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:+420111111111">+420 111 111 111</a>
+            </p>
+            <p class="contact-item">
+              <span class="icon">✉️</span>
+              <a href="mailto:info@medicareplus.com">info@medicareplus.com</a>
+            </p>
+          </address>
+          
+          <div class="office-hours">
+            <h4>Office Hours</h4>
+            <p><strong>Mon-Fri:</strong> <br/>8:00 AM - 8:00 PM</p>
+            <p><strong>Sat:</strong> <br/>9:00 AM - 5:00 PM</p>
+            <p><strong>Sun:</strong> <br/>Closed</p>
+            <p class="emergency-note"><strong>Emergency:</strong> 24/7</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="student-project-notice">
+        <p><strong>📚 Student Project Notice:</strong> This website is a student project created for educational purposes.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        <p class="footer-authors">Created by: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh</p>
+      </div>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navContainer = document.getElementById('nav-container');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navContainer.classList.toggle('active');
+      
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    const navLinks = navContainer.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navContainer.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Doctor data
+    const doctorsData = {
+      'sarah-mitchell': {
+        name: 'Dr. Sarah Mitchell',
+        specialty: 'Board-Certified Cardiologist',
+        image: 'https://img.freepik.com/free-photo/female-doctor-hospital-with-stethoscope_23-2148827774.jpg?semt=ais_hybrid&w=740&q=80',
+        badges: ['MD, Harvard', '15+ Years', 'Board Certified'],
+        description: 'Highly respected cardiologist dedicated to providing excellent patient-centered care using evidence-based treatment approaches',
+        expertise: ['Preventive Cardiology', 'Cardiac Imaging', 'Heart Failure Management', 'Coronary Artery Disease', 'Hypertension Management', 'Arrhythmia Treatment'],
+        education: [
+          { year: '2009 - Present', degree: 'Senior Cardiologist', institution: 'MediCare Plus' },
+          { year: '2006 - 2009', degree: 'Cardiology Fellowship', institution: 'Massachusetts General Hospital' },
+          { year: '2003 - 2006', degree: 'Internal Medicine', institution: 'Brigham & Women\'s' },
+          { year: '1999 - 2003', degree: 'MD', institution: 'Harvard Medical School' }
+        ],
+        schedule: [
+          { day: 'Monday', hours: '9:00 AM - 12:00 PM, 2:00 PM - 5:00 PM' },
+          { day: 'Tuesday', hours: '9:00 AM - 12:00 PM, 6:00 PM - 8:00 PM' },
+          { day: 'Wednesday', hours: '9:00 AM - 12:00 PM, 2:00 PM - 5:00 PM' },
+          { day: 'Thursday', hours: '2:00 PM - 8:00 PM' },
+          { day: 'Friday', hours: '9:00 AM - 12:00 PM' },
+          { day: 'Saturday', hours: 'By Appointment' },
+          { day: 'Sunday', hours: 'Closed' }
+        ]
+      },
+      'james-rodriguez': {
+        name: 'Dr. James Rodriguez',
+        specialty: 'Board-Certified Neurologist',
+        image: 'https://media.sciencephoto.com/image/f0265219/800wm',
+        badges: ['MD, Johns Hopkins', '12+ Years', 'Board Certified'],
+        description: 'Expert neurologist specializing in complex neurological disorders with a patient-centered approach to diagnosis and treatment',
+        expertise: ['Stroke Management', 'Epilepsy Treatment', 'Multiple Sclerosis', 'Parkinson\'s Disease', 'Headache Disorders', 'Neuromuscular Diseases'],
+        education: [
+          { year: '2012 - Present', degree: 'Senior Neurologist', institution: 'MediCare Plus' },
+          { year: '2009 - 2012', degree: 'Neurology Fellowship', institution: 'Mayo Clinic' },
+          { year: '2006 - 2009', degree: 'Internal Medicine', institution: 'Johns Hopkins Hospital' },
+          { year: '2002 - 2006', degree: 'MD', institution: 'Johns Hopkins University' }
+        ],
+        schedule: [
+          { day: 'Monday', hours: '8:00 AM - 4:00 PM' },
+          { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
+          { day: 'Wednesday', hours: '8:00 AM - 4:00 PM' },
+          { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
+          { day: 'Friday', hours: '8:00 AM - 2:00 PM' },
+          { day: 'Saturday', hours: 'Closed' },
+          { day: 'Sunday', hours: 'Closed' }
+        ]
+      },
+      'emily-chen': {
+        name: 'Dr. Emily Chen',
+        specialty: 'Board-Certified Pediatrician',
+        image: 'https://png.pngtree.com/png-clipart/20250417/original/pngtree-female-doctor-portrait-in-white-png-image_20827701.png',
+        badges: ['MD, Stanford', '10+ Years', 'Board Certified'],
+        description: 'Compassionate pediatrician focused on comprehensive care for children from infancy through adolescence',
+        expertise: ['Well-Child Care', 'Immunizations', 'Developmental Assessment', 'Childhood Illnesses', 'Nutrition Counseling', 'Adolescent Medicine'],
+        education: [
+          { year: '2014 - Present', degree: 'Pediatrician', institution: 'MediCare Plus' },
+          { year: '2011 - 2014', degree: 'Pediatrics Residency', institution: 'Children\'s Hospital Boston' },
+          { year: '2007 - 2011', degree: 'MD', institution: 'Stanford Medical School' }
+        ],
+        schedule: [
+          { day: 'Monday', hours: '9:00 AM - 5:00 PM' },
+          { day: 'Tuesday', hours: '9:00 AM - 5:00 PM' },
+          { day: 'Wednesday', hours: '9:00 AM - 5:00 PM' },
+          { day: 'Thursday', hours: '9:00 AM - 5:00 PM' },
+          { day: 'Friday', hours: '9:00 AM - 3:00 PM' },
+          { day: 'Saturday', hours: '9:00 AM - 1:00 PM' },
+          { day: 'Sunday', hours: 'Closed' }
+        ]
+      },
+      'michael-thompson': {
+        name: 'Dr. Michael Thompson',
+        specialty: 'Board-Certified Orthopedic Surgeon',
+        image: 'https://www.shutterstock.com/image-photo/healthcare-medical-staff-concept-portrait-600nw-2281024823.jpg',
+        badges: ['MD, Yale', '18+ Years', 'Board Certified'],
+        description: 'Experienced orthopedic surgeon specializing in sports medicine and joint replacement with cutting-edge surgical techniques',
+        expertise: ['Joint Replacement', 'Sports Injuries', 'Arthroscopic Surgery', 'Fracture Care', 'Spine Surgery', 'Hand Surgery'],
+        education: [
+          { year: '2006 - Present', degree: 'Orthopedic Surgeon', institution: 'MediCare Plus' },
+          { year: '2003 - 2006', degree: 'Orthopedic Surgery Fellowship', institution: 'Hospital for Special Surgery' },
+          { year: '1999 - 2003', degree: 'Orthopedic Residency', institution: 'Yale New Haven Hospital' },
+          { year: '1995 - 1999', degree: 'MD', institution: 'Yale School of Medicine' }
+        ],
+        schedule: [
+          { day: 'Monday', hours: '7:00 AM - 3:00 PM' },
+          { day: 'Tuesday', hours: 'Surgery Day' },
+          { day: 'Wednesday', hours: '7:00 AM - 3:00 PM' },
+          { day: 'Thursday', hours: 'Surgery Day' },
+          { day: 'Friday', hours: '7:00 AM - 12:00 PM' },
+          { day: 'Saturday', hours: 'Closed' },
+          { day: 'Sunday', hours: 'Closed' }
+        ]
+      },
+      'lisa-anderson': {
+        name: 'Dr. Lisa Anderson',
+        specialty: 'Emergency Medicine Specialist',
+        image: 'https://images.pexels.com/photos/19596247/pexels-photo-19596247.jpeg?cs=srgb&dl=pexels-martins-john-572778471-19596247.jpg&fm=jpg',
+        badges: ['MD, Columbia', '14+ Years', 'Board Certified'],
+        description: 'Head of emergency department with extensive experience in trauma care and critical patient management',
+        expertise: ['Trauma Care', 'Critical Care', 'Emergency Procedures', 'Toxicology', 'Cardiac Emergencies', 'Pediatric Emergencies'],
+        education: [
+          { year: '2010 - Present', degree: 'Head of Emergency Dept', institution: 'MediCare Plus' },
+          { year: '2007 - 2010', degree: 'Emergency Medicine Fellowship', institution: 'Bellevue Hospital' },
+          { year: '2004 - 2007', degree: 'Emergency Medicine Residency', institution: 'Columbia University Medical Center' },
+          { year: '2000 - 2004', degree: 'MD', institution: 'Columbia University' }
+        ],
+        schedule: [
+          { day: 'Monday', hours: 'Emergency - 24/7' },
+          { day: 'Tuesday', hours: 'Emergency - 24/7' },
+          { day: 'Wednesday', hours: 'Emergency - 24/7' },
+          { day: 'Thursday', hours: 'Emergency - 24/7' },
+          { day: 'Friday', hours: 'Emergency - 24/7' },
+          { day: 'Saturday', hours: 'Emergency - 24/7' },
+          { day: 'Sunday', hours: 'Emergency - 24/7' }
+        ]
+      }
+    };
+
+    // Get doctor ID from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const doctorId = urlParams.get('id') || 'sarah-mitchell';
+    const doctor = doctorsData[doctorId];
+
+    if (doctor) {
+      // Update page title
+      document.title = `${doctor.name} - MediCare Plus`;
+      
+      // Update breadcrumb
+      document.querySelector('.breadcrumb span[aria-current="page"]').textContent = doctor.name;
+      
+      // Update doctor image
+      const detailImage = document.querySelector('.detail-image');
+      detailImage.src = doctor.image;
+      detailImage.alt = doctor.name;
+      
+      // Update doctor info
+      document.querySelector('.detail-title').textContent = doctor.name;
+      document.querySelector('.detail-subtitle').textContent = doctor.specialty;
+      document.querySelector('.detail-info p:nth-of-type(2)').textContent = doctor.description;
+      
+      // Update badges
+      const badgesContainer = document.querySelector('.detail-badges');
+      badgesContainer.innerHTML = doctor.badges.map(badge => `<span class="badge">${badge}</span>`).join('');
+      
+      // Update expertise list
+      const expertiseList = document.querySelector('#expertise-title + ul');
+      expertiseList.innerHTML = doctor.expertise.map(item => `<li>${item}</li>`).join('');
+      
+      // Update education table
+      const educationTableBody = document.querySelector('article table tbody');
+      educationTableBody.innerHTML = doctor.education.map(edu => 
+        `<tr><td>${edu.year}</td><td>${edu.degree}</td><td>${edu.institution}</td></tr>`
+      ).join('');
+      
+      // Update schedule table
+      const scheduleTableBody = document.querySelectorAll('table tbody')[1];
+      scheduleTableBody.innerHTML = doctor.schedule.map(sched => 
+        `<tr><td><strong>${sched.day}</strong></td><td>${sched.hours}</td></tr>`
+      ).join('');
+    }
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

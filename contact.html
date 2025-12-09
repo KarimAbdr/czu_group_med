@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact MediCare Plus - Find directions, hours, and contact information.">
+  <title>Contact Us - MediCare Plus</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <a href="tel:+420111111111" aria-label="Call us">📞 <span>+420 111 111 111</span></a>
+            <a href="mailto:info@medicareplus.com" aria-label="Email us">✉️ <span>info@medicareplus.com</span></a>
+          </div>
+          <div class="language-selector">
+            <span aria-hidden="true">🌐</span>
+            <select aria-label="Select language">
+              <option value="en">English</option>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content">
+          <a href="./index.html" class="logo" aria-label="MediCare Plus">
+            <div class="logo-icon">M+</div>
+            <strong>MediCare Plus</strong>
+          </a>
+          
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+          
+          <div class ="nav-container" id="nav-container">
+            <nav class="main-nav" aria-label="Main navigation">
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./booking.html">Book</a></li>
+                <li><a href="./contact.html" class="active" aria-current="page">Contact</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+              </ul>
+            </nav>
+            
+            <form class="search-form" role="search" action="./search-results.html" method="get">
+              <label for="search-input" class="sr-only">Search</label>
+              <input 
+                type="text" 
+                id="search-input" 
+                name="q" 
+                class="search-input" 
+                placeholder="Search..." 
+                aria-label="Search"
+              >
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="./index.html">Home</a></li>
+          <li><span aria-current="page">Contact</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  
+  <main id="main-content">
+    <section class="section" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title" class="section-title">Get in Touch</h1>
+        <p class="text-center" class="dept-intro text-center">
+          We're here to help! Contact us for appointments or inquiries.
+        </p>
+        
+        <div class="contact-grid">
+          <article class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h2>Phone</h2>
+            <p><strong>General:</strong></p>
+            <p><a href="tel:+420111111111">+420 111 111 111</a></p>
+            <p class="mt-md"><strong>Emergency (24/7):</strong></p>
+            <p><a href="tel:+1234567999">+1 (234) 567-999</a></p>
+          </article>
+          
+          <article class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h2>Email</h2>
+            <p><strong>General:</strong></p>
+            <p><a href="mailto:info@medicareplus.com">info@medicareplus.com</a></p>
+            <p class="mt-md"><strong>Appointments:</strong></p>
+            <p><a href="mailto:appointments@medicareplus.com">appointments@medicareplus.com</a></p>
+          </article>
+          
+          <article class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h2>Location</h2>
+            <address class="address-text">
+              <p><strong>MediCare Plus</strong></p>
+              <p>123 Healthcare Avenue</p>
+              <p>Medical District, MD 12345</p>
+              <p>United States</p>
+            </address>
+          </article>
+          
+          <article class="contact-card">
+            <div class="contact-icon">🕐</div>
+            <h2>Hours</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Mon-Fri:</strong></td>
+                  <td><time datetime="08:00">8:00 AM</time> - <time datetime="20:00">8:00 PM</time></td>
+                </tr>
+                <tr>
+                  <td><strong>Saturday:</strong></td>
+                  <td><time datetime="09:00">9:00 AM</time> - <time datetime="17:00">5:00 PM</time></td>
+                </tr>
+                <tr>
+                  <td><strong>Sunday:</strong></td>
+                  <td>Closed</td>
+                </tr>
+                <tr>
+                  <td><strong>Emergency:</strong></td>
+                  <td>24/7</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" class="alt-bg" aria-labelledby="directions-title">
+      <div class="container">
+        <h2 id="directions-title" class="section-title">How to Get Here</h2>
+        
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>🚗 By Car</h3>
+            <p><strong>Parking:</strong> Free parking in 5-level garage with covered walkway</p>
+            <p class="mt-md">123 Healthcare Avenue, Medical District</p>
+          </article>
+          
+          <article class="contact-card">
+            <h3>🚇 Public Transit</h3>
+            <p><strong>Metro:</strong> Blue Line to Medical Center Station (5 min walk)</p>
+            <p class="mt-md"><strong>Bus:</strong> Routes 42, 56, 89</p>
+          </article>
+          
+          <article class="contact-card">
+            <h3>♿ Accessibility</h3>
+            <p>Wheelchair accessible with elevators, ramps, and accessible restrooms</p>
+          </article>
+          
+          <article class="contact-card">
+            <h3>📞 Need Help?</h3>
+            <p>Call our coordinators at <a href="tel:+420111111111">+420 111 111 111</a> for directions</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" aria-labelledby="form-title">
+      <div class="container">
+        <h2 id="form-title" class="section-title">Send us a Message</h2>
+        
+        <form class="form-section form-container">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">
+                First Name <span class="required-mark">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="first-name" 
+                name="first-name" 
+                required 
+                aria-required="true"
+              >
+            </div>
+            
+            <div class="form-group">
+              <label for="last-name">
+                Last Name <span class="required-mark">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="last-name" 
+                name="last-name" 
+                required 
+                aria-required="true"
+              >
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">
+                Email <span class="required-mark">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                aria-required="true"
+              >
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone"
+              >
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">
+              Subject <span class="required-mark">*</span>
+            </label>
+            <select id="subject" name="subject" required aria-required="true">
+              <option value="">Select subject</option>
+              <option value="appointment">Appointment</option>
+              <option value="medical-records">Medical Records</option>
+              <option value="billing">Billing</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">
+              Message <span class="required-mark">*</span>
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              required 
+              aria-required="true"
+              placeholder="Your message..."
+            ></textarea>
+          </div>
+          
+          <div class="form-group text-center">
+            <button type="submit" class="submit-button">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-about">
+          <h3>About MediCare Plus</h3>
+          <p>Quality healthcare services with compassion and expertise since 2010.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html">Book Appointment</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>Patient Resources</h3>
+          <ul>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="preparation-guides.html">Preparation Guides</a></li>
+            <li><a href="privacy-policy.html">Privacy & Data Protection</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="./contact.html">Emergency</a></li>
+            <li><a href="./departments.html#cardiology">Cardiology</a></li>
+            <li><a href="./departments.html#neurology">Neurology</a></li>
+            <li><a href="./departments.html#pediatrics">Pediatrics</a></li>
+            <li><a href="./departments.html#pharmacy">Pharmacy</a></li>
+            <li><a href="./departments.html#imaging">Imaging</a></li>
+            <li><a href="./departments.html#laboratory">Laboratory</a></li>
+            <li><a href="./departments.html#orthopedics">Orthopedics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact & Hours</h3>
+          <address>
+            <p class="contact-item">
+              <span class="icon">📍</span>
+              <span>123 Healthcare Ave<br>Medical District, MD 12345</span>
+            </p>
+            <p class="contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:+420111111111">+420 111 111 111</a>
+            </p>
+            <p class="contact-item">
+              <span class="icon">✉️</span>
+              <a href="mailto:info@medicareplus.com">info@medicareplus.com</a>
+            </p>
+          </address>
+          
+          <div class="office-hours">
+            <h4>Office Hours</h4>
+            <p><strong>Mon-Fri:</strong> <br/>8:00 AM - 8:00 PM</p>
+            <p><strong>Sat:</strong> <br/>9:00 AM - 5:00 PM</p>
+            <p><strong>Sun:</strong> <br/>Closed</p>
+            <p class="emergency-note"><strong>Emergency:</strong> 24/7</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="student-project-notice">
+        <p><strong>📚 Student Project Notice:</strong> This website is a student project created for educational purposes.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        <p class="footer-authors">Created by: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh</p>
+      </div>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navContainer = document.getElementById('nav-container');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navContainer.classList.toggle('active');
+      
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    const navLinks = navContainer.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navContainer.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

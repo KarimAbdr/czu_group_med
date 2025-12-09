@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy & Data Protection - MediCare Plus">
+  <title>Privacy & Data Protection - MediCare Plus</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .privacy-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .privacy-card {
+      background: var(--color-card-bg);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-xl);
+      margin-bottom: var(--spacing-xl);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .privacy-card h3 {
+      color: var(--color-primary);
+      margin-top: 0;
+      margin-bottom: var(--spacing-md);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+    
+    .privacy-card h4 {
+      color: var(--color-text);
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-sm);
+      font-size: 1.2rem;
+    }
+    
+    .privacy-card p {
+      line-height: 1.7;
+      margin-bottom: var(--spacing-md);
+      color: var(--color-text-secondary);
+    }
+    
+    .privacy-card ul, .privacy-card ol {
+      margin: var(--spacing-sm) 0;
+      padding-left: var(--spacing-xl);
+    }
+    
+    .privacy-card li {
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.6;
+    }
+    
+    .security-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      background: linear-gradient(135deg, rgba(42, 157, 143, 0.15) 0%, rgba(233, 196, 106, 0.15) 100%);
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: var(--radius-lg);
+      margin: var(--spacing-xs);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    .security-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      margin: var(--spacing-lg) 0;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(42, 157, 143, 0.1) 0%, rgba(233, 196, 106, 0.1) 100%);
+      border-left: 4px solid var(--color-primary);
+      padding: var(--spacing-md);
+      margin: var(--spacing-md) 0;
+      border-radius: var(--radius-sm);
+    }
+    
+    .highlight-box strong {
+      color: var(--color-primary);
+      display: block;
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .icon-emoji {
+      font-size: 1.5rem;
+    }
+    
+    .page-header {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: white;
+      padding: var(--spacing-2xl) var(--spacing-md);
+      text-align: center;
+      margin-bottom: var(--spacing-2xl);
+    }
+    
+    .page-header h1 {
+      margin: 0 0 var(--spacing-sm);
+      font-size: 2.5rem;
+    }
+    
+    .page-header p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .trust-banner {
+      background: linear-gradient(135deg, #2A9D8F 0%, #E9C46A 100%);
+      color: white;
+      padding: var(--spacing-xl);
+      border-radius: var(--radius-md);
+      text-align: center;
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .trust-banner h2 {
+      margin: 0 0 var(--spacing-sm);
+      font-size: 1.8rem;
+    }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+      margin: var(--spacing-lg) 0;
+    }
+
+    .right-item {
+      background: var(--color-background-alt);
+      padding: var(--spacing-md);
+      border-radius: var(--radius-md);
+      border-left: 3px solid var(--color-primary);
+    }
+
+    .right-item h4 {
+      margin: 0 0 var(--spacing-xs);
+      color: var(--color-primary);
+    }
+
+    .right-item p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <a href="tel:+420111111111" aria-label="Call us">📞 <span>+420 111 111 111</span></a>
+            <a href="mailto:info@medicareplus.com" aria-label="Email us">✉️ <span>info@medicareplus.com</span></a>
+          </div>
+          <div class="language-selector">
+            <span aria-hidden="true">🌐</span>
+            <select aria-label="Select language">
+              <option value="en">English</option>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content">
+          <a href="./index.html" class="logo" aria-label="MediCare Plus - Go to homepage">
+            <div class="logo-icon">M+</div>
+            <strong>MediCare Plus</strong>
+          </a>
+          
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+          
+          <div class ="nav-container" id="nav-container">
+            <nav class="main-nav" aria-label="Main navigation">
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./booking.html">Book</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+              </ul>
+            </nav>
+            
+            <form class="search-form" role="search" action="./search-results.html" method="get">
+              <label for="search-input" class="sr-only">Search</label>
+              <input 
+                type="text" 
+                id="search-input" 
+                name="q" 
+                class="search-input" 
+                placeholder="Search..." 
+                aria-label="Search"
+              >
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    <div class="page-header">
+      <div class="container">
+        <h1>Privacy & Data Protection</h1>
+        <p>Your trust and privacy are our highest priorities</p>
+      </div>
+    </div>
+    
+    <section class="privacy-section">
+      <div class="trust-banner">
+        <h2>🔒 Your Data is Safe With Us</h2>
+        <p class="compact-text larger-text">
+          We implement the highest standards of data security and privacy protection to safeguard your personal health information.
+        </p>
+      </div>
+
+      <!-- Our Commitment -->
+      <div class="privacy-card">
+        <h3><span class="icon-emoji">🤝</span> Our Commitment to You</h3>
+        
+        <p>
+          At MediCare Plus, we understand that your medical information is deeply personal and confidential. 
+          We are committed to protecting your privacy and maintaining the security of your health data at all times.
+        </p>
+
+        <p>
+          <strong>We promise to:</strong>
+        </p>
+        <ul>
+          <li>Keep all your medical records and personal information strictly confidential</li>
+          <li>Use advanced encryption and security technologies to protect your data</li>
+          <li>Only share your information with your explicit consent or when required by law</li>
+          <li>Provide you with full control over your personal health information</li>
+          <li>Comply with all relevant data protection regulations including GDPR</li>
+          <li>Train our staff regularly on privacy and confidentiality protocols</li>
+        </ul>
+      </div>
+
+      <!-- Security Measures -->
+      <div class="privacy-card">
+        <h3><span class="icon-emoji">🛡️</span> How We Protect Your Data</h3>
+        
+        <h4>Technical Security:</h4>
+        <ul>
+          <li><strong>256-bit Encryption:</strong> All data is encrypted both in transit and at rest</li>
+          <li><strong>Secure Servers:</strong> Medical records stored on HIPAA-compliant secure servers</li>
+          <li><strong>Firewall Protection:</strong> Advanced firewalls prevent unauthorized access</li>
+          <li><strong>Regular Security Audits:</strong> Third-party security assessments performed quarterly</li>
+          <li><strong>Automatic Backups:</strong> Daily encrypted backups with disaster recovery protocols</li>
+          <li><strong>Multi-factor Authentication:</strong> Required for all staff accessing patient data</li>
+        </ul>
+
+        <h4>Physical Security:</h4>
+        <ul>
+          <li><strong>Access Control:</strong> Restricted access to medical record rooms and data centers</li>
+          <li><strong>Surveillance Systems:</strong> 24/7 CCTV monitoring of sensitive areas</li>
+          <li><strong>Secure Document Disposal:</strong> All paper records are shredded confidentially</li>
+          <li><strong>Visitor Management:</strong> All visitors must sign in and be escorted</li>
+        </ul>
+
+        <h4>Administrative Security:</h4>
+        <ul>
+          <li><strong>Privacy Training:</strong> Mandatory annual privacy and security training for all staff</li>
+          <li><strong>Access Logs:</strong> All data access is logged and monitored</li>
+          <li><strong>Privacy Officer:</strong> Dedicated Data Protection Officer oversees compliance</li>
+          <li><strong>Incident Response Plan:</strong> Procedures in place for any security breaches</li>
+        </ul>
+
+        <div class="security-badges">
+          <span class="security-badge">🔐 GDPR Compliant</span>
+          <span class="security-badge">✓ HIPAA Certified</span>
+          <span class="security-badge">🔒 ISO 27001 Certified</span>
+          <span class="security-badge">✓ SSL/TLS Encrypted</span>
+        </div>
+      </div>
+
+      <!-- Your Rights -->
+      <div class="privacy-card">
+        <h3><span class="icon-emoji">⚖️</span> Your Privacy Rights</h3>
+        
+        <p>
+          Under data protection law, you have important rights regarding your personal health information:
+        </p>
+
+        <div class="rights-grid">
+          <div class="right-item">
+            <h4>Right to Access</h4>
+            <p>Request copies of your medical records and health information at any time</p>
+          </div>
+
+          <div class="right-item">
+            <h4>Right to Correction</h4>
+            <p>Request corrections to inaccurate or incomplete health information</p>
+          </div>
+
+          <div class="right-item">
+            <h4>Right to Restriction</h4>
+            <p>Limit how we use your data for certain purposes</p>
+          </div>
+
+          <div class="right-item">
+            <h4>Right to Portability</h4>
+            <p>Receive your health data in a portable electronic format</p>
+          </div>
+
+          <div class="right-item">
+            <h4>Right to Object</h4>
+            <p>Object to processing of your data for specific purposes</p>
+          </div>
+
+          <div class="right-item">
+            <h4>Right to Erasure</h4>
+            <p>Request deletion of your data (subject to legal requirements)</p>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <strong>📧 Exercise Your Rights:</strong>
+          To exercise any of these rights, contact our Data Protection Officer at 
+          <a href="mailto:privacy@medicareplus.com" class="primary-link">privacy@medicareplus.com</a> 
+          or call <a href="tel:+420111111111" class="primary-link">+420 111 111 111</a>
+        </div>
+      </div>
+
+      <!-- Information We Collect -->
+      <div class="privacy-card">
+        <h3><span class="icon-emoji">📝</span> Information We Collect</h3>
+        
+        <h4>Personal Information:</h4>
+        <ul>
+          <li>Name, date of birth, contact details</li>
+          <li>National ID or passport number</li>
+          <li>Insurance information</li>
+          <li>Emergency contact information</li>
+        </ul>
+
+        <h4>Medical Information:</h4>
+        <ul>
+          <li>Medical history and current conditions</li>
+          <li>Medications and allergies</li>
+          <li>Test results and diagnostic reports</li>
+          <li>Treatment plans and doctor's notes</li>
+          <li>Vaccination records</li>
+        </ul>
+
+        <h4>Why We Collect This Information:</h4>
+        <ul>
+          <li><strong>Patient Care:</strong> To provide quality medical treatment and care</li>
+          <li><strong>Safety:</strong> To ensure your safety and prevent medical errors</li>
+          <li><strong>Continuity:</strong> To maintain consistent care across different healthcare providers</li>
+          <li><strong>Legal Requirements:</strong> To comply with healthcare regulations</li>
+          <li><strong>Billing:</strong> To process insurance claims and payments</li>
+        </ul>
+      </div>
+
+      <!-- How We Use Your Data -->
+      <div class="privacy-card">
+        <h3><span class="icon-emoji">🔍</span> How We Use Your Information</h3>
+        
+        <p><strong>We ONLY use your information for:</strong></p>
+        <ul>
+          <li><strong>Medical Treatment:</strong> Providing healthcare services to you</li>
+          <li><strong>Healthcare Operations:</strong> Improving quality of care and facility operations</li>
+          <li><strong>Payment Processing:</strong> Billing and insurance claim processing</li>
+          <li><strong>Legal Compliance:</strong> Meeting legal and regulatory requirements</li>
+          <li><strong>Emergency Situations:</strong> Protecting your health in urgent situations</li>
+        </ul>
+
+        <div class="highlight-box">
+          <strong>❌ We NEVER:</strong>
+          <ul class="compact-margin">
+            <li>Sell your personal or medical information to third parties</li>
+            <li>Share your data with marketers or advertisers</li>
+            <li>Use your information for purposes unrelated to your healthcare</li>
+            <li>Disclose your information without your consent (except as legally required)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Data Sharing -->
+      <div class="privacy-card">
+        <h3><span class="icon-emoji">🤐</span> When We Share Your Information</h3>
+        
+        <p>We maintain strict confidentiality. Your information may only be shared:</p>
+
+        <h4>With Your Consent:</h4>
+        <ul>
+          <li>When you authorize us to share with other healthcare providers</li>
+          <li>When you request medical records be sent elsewhere</li>
+          <li>When you explicitly consent to information sharing</li>
+        </ul>
+
+        <h4>For Treatment Purposes:</h4>
+        <ul>
+          <li>With specialists and healthcare professionals involved in your care</li>
+          <li>With laboratories and diagnostic facilities for testing</li>
+          <li>With pharmacies to fill your prescriptions</li>
+        </ul>
+
+        <h4>Legal Requirements:</h4>
+        <ul>
+          <li>When required by law or court order</li>
+          <li>To report certain diseases to public health authorities</li>
+          <li>To comply with health and safety regulations</li>
+        </ul>
+
+        <h4>Emergency Situations:</h4>
+        <ul>
+          <li>To protect your vital interests when you cannot consent</li>
+          <li>To emergency responders in life-threatening situations</li>
+        </ul>
+
+        <p class="mt-md">
+          <strong>Important:</strong> All third parties we share information with are bound by strict confidentiality 
+          agreements and must comply with applicable data protection laws.
+        </p>
+      </div>
+
+      <!-- Data Retention -->
+      <div class="privacy-card">
+        <h3><span class="icon-emoji">📅</span> How Long We Keep Your Data</h3>
+        
+        <p>
+          We retain your medical records and personal information in accordance with legal requirements:
+        </p>
+
+        <ul>
+          <li><strong>Adult Medical Records:</strong> Minimum 10 years after last treatment</li>
+          <li><strong>Pediatric Records:</strong> Until patient turns 25 years old or 10 years after last treatment, whichever is longer</li>
+          <li><strong>Diagnostic Images:</strong> Minimum 5 years</li>
+          <li><strong>Billing Records:</strong> 7 years as required by tax law</li>
+        </ul>
+
+        <p>
+          After the retention period, records are securely destroyed using certified confidential destruction services.
+        </p>
+      </div>
+
+      <!-- Cookies and Website -->
+      <div class="privacy-card">
+        <h3><span class="icon-emoji">🍪</span> Website Privacy & Cookies</h3>
+        
+        <h4>Our Website:</h4>
+        <p>
+          Our website uses minimal cookies to improve functionality and user experience. We do not use 
+          tracking cookies or share website data with advertisers.
+        </p>
+
+        <h4>Essential Cookies Only:</h4>
+        <ul>
+          <li>Session cookies for appointment booking</li>
+          <li>Security cookies to protect your connection</li>
+          <li>Language preference cookies</li>
+        </ul>
+
+        <p>
+          You can control cookie settings through your browser preferences.
+        </p>
+      </div>
+
+      <!-- Contact and Questions -->
+      <div class="privacy-card" class="bordered-primary">
+        <h3><span class="icon-emoji">📞</span> Questions About Your Privacy?</h3>
+        
+        <p>
+          We're here to help! If you have any questions or concerns about how we protect your privacy, 
+          please don't hesitate to contact us.
+        </p>
+
+        <h4>Contact Our Privacy Team:</h4>
+        <ul class="list-unstyled">
+          <li class="mb-sm">
+            <strong>📧 Email:</strong> 
+            <a href="mailto:privacy@medicareplus.com" class="primary-link">privacy@medicareplus.com</a>
+          </li>
+          <li class="mb-sm">
+            <strong>📞 Phone:</strong> 
+            <a href="tel:+420111111111" class="primary-link">+420 111 111 111</a>
+          </li>
+          <li class="mb-sm">
+            <strong>📍 Mail:</strong> Data Protection Officer, MediCare Plus, 123 Healthcare Ave, Medical District, MD 12345
+          </li>
+          <li>
+            <strong>⏰ Office Hours:</strong> Monday-Friday, 9:00 AM - 5:00 PM
+          </li>
+        </ul>
+
+        <div class="highlight-box" class="profile-action">
+          <strong>📋 File a Complaint:</strong>
+          If you believe your privacy rights have been violated, you have the right to file a complaint with 
+          our Data Protection Officer or with your local data protection authority. We will not retaliate 
+          against anyone who files a complaint.
+        </div>
+      </div>
+
+      <!-- Updates to Policy -->
+      <div class="privacy-card">
+        <h3><span class="icon-emoji">🔄</span> Updates to This Policy</h3>
+        
+        <p>
+          We may update this privacy policy from time to time to reflect changes in our practices or legal requirements. 
+          When we make significant changes, we will notify you through:
+        </p>
+
+        <ul>
+          <li>Posted notice in our clinic</li>
+          <li>Email notification to registered patients</li>
+          <li>Updated notice on our website</li>
+        </ul>
+
+        <p>
+          <strong>Last Updated:</strong> December 2025
+        </p>
+      </div>
+    </section>
+
+    <section class="section text-center" class="alt-bg">
+      <div class="container">
+        <h2>Your Trust Matters to Us</h2>
+        <p class="cta-text">
+          We're committed to maintaining the highest standards of privacy and data protection. 
+          Your health and confidentiality are always our top priorities.
+        </p>
+        <div class="flex-center">
+          <a href="./booking.html" class="cta-button">Book Appointment</a>
+          <a href="./contact.html" class="cta-button" class="btn-outline-primary">Contact Privacy Officer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-about">
+          <h3>About MediCare Plus</h3>
+          <p>Quality healthcare services with compassion and expertise since 2010.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html">Book Appointment</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>Patient Resources</h3>
+          <ul>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="preparation-guides.html">Preparation Guides</a></li>
+            <li><a href="privacy-policy.html">Privacy & Data Protection</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="./contact.html">Emergency</a></li>
+            <li><a href="./departments.html#cardiology">Cardiology</a></li>
+            <li><a href="./departments.html#neurology">Neurology</a></li>
+            <li><a href="./departments.html#pediatrics">Pediatrics</a></li>
+            <li><a href="./departments.html#pharmacy">Pharmacy</a></li>
+            <li><a href="./departments.html#imaging">Imaging</a></li>
+            <li><a href="./departments.html#laboratory">Laboratory</a></li>
+            <li><a href="./departments.html#orthopedics">Orthopedics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact & Hours</h3>
+          <address>
+            <p class="contact-item">
+              <span class="icon">📍</span>
+              <span>123 Healthcare Ave<br>Medical District, MD 12345</span>
+            </p>
+            <p class="contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:+420111111111">+420 111 111 111</a>
+            </p>
+            <p class="contact-item">
+              <span class="icon">✉️</span>
+              <a href="mailto:info@medicareplus.com">info@medicareplus.com</a>
+            </p>
+          </address>
+          
+          <div class="office-hours">
+            <h4>Office Hours</h4>
+            <p><strong>Mon-Fri:</strong> <br/>8:00 AM - 8:00 PM</p>
+            <p><strong>Sat:</strong> <br/>9:00 AM - 5:00 PM</p>
+            <p><strong>Sun:</strong> <br/>Closed</p>
+            <p class="emergency-note"><strong>Emergency:</strong> 24/7</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="student-project-notice">
+        <p><strong>📚 Student Project Notice:</strong> This website is a student project created for educational purposes.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        <p class="footer-authors">Created by: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh</p>
+      </div>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+  </footer>
+  
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navContainer = document.getElementById('nav-container');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navContainer.classList.toggle('active');
+      
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    const navLinks = navContainer.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navContainer.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

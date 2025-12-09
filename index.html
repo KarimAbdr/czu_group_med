@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MediCare Plus - Your trusted healthcare provider offering quality medical services and experienced doctors.">
+  <title>MediCare Plus - Quality Healthcare</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <a href="tel:+420111111111" aria-label="Call us">📞 <span>+420 111 111 111</span></a>
+            <a href="mailto:info@medicareplus.com" aria-label="Email us">✉️ <span>info@medicareplus.com</span></a>
+          </div>
+          <div class="language-selector">
+            <span aria-hidden="true">🌐</span>
+            <select aria-label="Select language">
+              <option value="en">English</option>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content">
+          <a href="./index.html" class="logo" aria-label="MediCare Plus - Go to homepage">
+            <div class="logo-icon">M+</div>
+            <strong>MediCare Plus</strong>
+          </a>
+          
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+          
+          <div class ="nav-container" id="nav-container">
+            <nav class="main-nav" aria-label="Main navigation">
+              <ul>
+                <li><a href="./index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./booking.html">Book</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+              </ul>
+            </nav>
+            
+            <form class="search-form" role="search" action="./search-results.html" method="get">
+              <label for="search-input" class="sr-only">Search</label>
+              <input 
+                type="text" 
+                id="search-input" 
+                name="q" 
+                class="search-input" 
+                placeholder="Search..." 
+                aria-label="Search"
+              >
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="hero-title">Your Health, Our Priority</h1>
+          <p>Expert medical care with compassion and innovation</p>
+          <a href="./booking.html" class="cta-button">Book Appointment</a>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMGludGVyaW9yfGVufDB8fHx8MTc2NDc0MjY3Mnww&ixlib=rb-4.1.0&q=80&w=1080" alt="" class="hero-background" aria-hidden="true">
+    </section>
+    
+    <section class="stats-section" aria-labelledby="stats-title">
+      <div class="container">
+        <h2 id="stats-title" class="sr-only">Our Achievements</h2>
+        <div class="stats-container">
+          <div class="stat-item">
+            <strong class="stat-number">50+</strong>
+            <span class="stat-label">Doctors</span>
+          </div>
+          <div class="stat-item">
+            <strong class="stat-number">15K+</strong>
+            <span class="stat-label">Patients</span>
+          </div>
+          <div class="stat-item">
+            <strong class="stat-number">20+</strong>
+            <span class="stat-label">Departments</span>
+          </div>
+          <div class="stat-item">
+            <strong class="stat-number">24/7</strong>
+            <span class="stat-label">Emergency</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title" class="section-title">Our Services</h2>
+        
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="assets/ambulance.png" alt="Emergency Care Icon" >
+            </div>
+            <h3>Emergency Care</h3>
+            <p>24/7 emergency services with rapid response team and state-of-the-art equipment</p>
+            <a href="./contact.html">Learn More →</a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="assets/heart.png" alt="Cardiology Icon" >
+            </div>
+            <h3>Cardiology</h3>
+            <p>Heart and vascular care from experienced specialists</p>
+            <a href="departments.html#cardiology">Learn More →</a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="assets/neurology.png" alt="Neurology Icon" >
+            </div>
+            <h3>Neurology</h3>
+            <p>Expert neurological care and treatment</p>
+            <a href="departments.html#neurology">Learn More →</a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="assets/orthopedic.png" alt="Orthopedics Icon" >
+            </div>
+            <h3>Orthopedics</h3>
+            <p>Joint and bone specialists</p>
+            <a href="departments.html#orthopedics">Learn More →</a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="assets/pediatric.png" alt="Pediatrics Icon" >
+            </div>
+            <h3>Pediatrics</h3>
+            <p>Dedicated care for children from infancy through adolescence</p>
+            <a href="departments.html#pediatrics">Learn More →</a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="assets/laboratory.png" alt="Laboratory Icon" >
+            </div>
+            <h3>Laboratory</h3>
+            <p>Advanced diagnostic testing</p>
+            <a href="departments.html#laboratory">Learn More →</a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="assets/radiology.png" alt="Imaging Icon" >
+            </div>
+            <h3>Imaging</h3>
+            <p>X-ray, MRI, CT scans</p>
+            <a href="departments.html#imaging">Learn More →</a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="assets/pharmacy.png" alt="Pharmacy Icon" >
+            </div>
+            <h3>Pharmacy</h3>
+            <p>Full pharmacy services</p>
+            <a href="departments.html#pharmacy">Learn More →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" class="alt-bg" aria-labelledby="why-choose-title">
+      <div class="container">
+        <h2 id="why-choose-title" class="section-title">Why Choose Us</h2>
+        
+        <div class="contact-grid">
+          <article class="contact-card">
+            <div class="contact-icon">👨‍⚕️</div>
+            <h3>Expert Team</h3>
+            <p>Board-certified specialists with extensive experience</p>
+          </article>
+          
+          <article class="contact-card">
+            <div class="contact-icon">🏆</div>
+            <h3>Quality Care</h3>
+            <p>Award-winning healthcare services</p>
+          </article>
+          
+          <article class="contact-card">
+            <div class="contact-icon">🔒</div>
+            <h3>Privacy First</h3>
+            <p>Secure patient information and confidentiality</p>
+          </article>
+          
+          <article class="contact-card">
+            <div class="contact-icon">⚡</div>
+            <h3>Modern Facilities</h3>
+            <p>State-of-the-art medical equipment</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section text-center">
+      <div class="container">
+        <h2 class="section-title">Ready to Get Started?</h2>
+        <p class="cta-text">Book your appointment today and experience quality healthcare</p>
+        <a href="./booking.html" class="cta-button">Schedule Your Visit</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-about">
+          <h3>About MediCare Plus</h3>
+          <p>Quality healthcare services with compassion and expertise since 2010.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html">Book Appointment</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>Patient Resources</h3>
+          <ul>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="preparation-guides.html">Preparation Guides</a></li>
+            <li><a href="privacy-policy.html">Privacy & Data Protection</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="./contact.html">Emergency</a></li>
+            <li><a href="./departments.html#cardiology">Cardiology</a></li>
+            <li><a href="./departments.html#neurology">Neurology</a></li>
+            <li><a href="./departments.html#pediatrics">Pediatrics</a></li>
+            <li><a href="./departments.html#pharmacy">Pharmacy</a></li>
+            <li><a href="./departments.html#imaging">Imaging</a></li>
+            <li><a href="./departments.html#laboratory">Laboratory</a></li>
+            <li><a href="./departments.html#orthopedics">Orthopedics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact & Hours</h3>
+          <address>
+            <p class="contact-item">
+              <span class="icon">📍</span>
+              <span>123 Healthcare Ave<br>Medical District, MD 12345</span>
+            </p>
+            <p class="contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:+420111111111">+420 111 111 111</a>
+            </p>
+            <p class="contact-item">
+              <span class="icon">✉️</span>
+              <a href="mailto:info@medicareplus.com">info@medicareplus.com</a>
+            </p>
+          </address>
+          
+          <div class="office-hours">
+            <h4>Office Hours</h4>
+            <p><strong>Mon-Fri:</strong> <br/>8:00 AM - 8:00 PM</p>
+            <p><strong>Sat:</strong> <br/>9:00 AM - 5:00 PM</p>
+            <p><strong>Sun:</strong> <br/>Closed</p>
+            <p class="emergency-note"><strong>Emergency:</strong> 24/7</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="student-project-notice">
+        <p><strong>📚 Student Project Notice:</strong> This website is a student project created for educational purposes.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        <p class="footer-authors">Created by: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh</p>
+      </div>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+  </footer>
+  
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navContainer = document.getElementById('nav-container');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navContainer.classList.toggle('active');
+      
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    const navLinks = navContainer.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navContainer.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

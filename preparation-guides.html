@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Preparation Guides - MediCare Plus">
+  <title>Preparation Guides - MediCare Plus</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .guide-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .guide-card {
+      background: var(--color-card-bg);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-xl);
+      margin-bottom: var(--spacing-xl);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .guide-card h3 {
+      color: var(--color-primary);
+      margin-top: 0;
+      margin-bottom: var(--spacing-md);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+    
+    .guide-card h4 {
+      color: var(--color-text);
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-sm);
+      font-size: 1.2rem;
+    }
+    
+    .guide-card ul, .guide-card ol {
+      margin: var(--spacing-sm) 0;
+      padding-left: var(--spacing-xl);
+    }
+    
+    .guide-card li {
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.6;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(42, 157, 143, 0.1) 0%, rgba(233, 196, 106, 0.1) 100%);
+      border-left: 4px solid var(--color-primary);
+      padding: var(--spacing-md);
+      margin: var(--spacing-md) 0;
+      border-radius: var(--radius-sm);
+    }
+    
+    .highlight-box strong {
+      color: var(--color-primary);
+      display: block;
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .icon-emoji {
+      font-size: 1.5rem;
+    }
+    
+    .page-header {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: white;
+      padding: var(--spacing-2xl) var(--spacing-md);
+      text-align: center;
+      margin-bottom: var(--spacing-2xl);
+    }
+    
+    .page-header h1 {
+      margin: 0 0 var(--spacing-sm);
+      font-size: 2.5rem;
+    }
+    
+    .page-header p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .checklist li {
+      padding-left: var(--spacing-lg);
+      position: relative;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--color-success);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <a href="tel:+420111111111" aria-label="Call us">📞 <span>+420 111 111 111</span></a>
+            <a href="mailto:info@medicareplus.com" aria-label="Email us">✉️ <span>info@medicareplus.com</span></a>
+          </div>
+          <div class="language-selector">
+            <span aria-hidden="true">🌐</span>
+            <select aria-label="Select language">
+              <option value="en">English</option>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content">
+          <a href="./index.html" class="logo" aria-label="MediCare Plus - Go to homepage">
+            <div class="logo-icon">M+</div>
+            <strong>MediCare Plus</strong>
+          </a>
+          
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+          
+          <div class ="nav-container" id="nav-container">
+            <nav class="main-nav" aria-label="Main navigation">
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./booking.html">Book</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+              </ul>
+            </nav>
+            
+            <form class="search-form" role="search" action="./search-results.html" method="get">
+              <label for="search-input" class="sr-only">Search</label>
+              <input 
+                type="text" 
+                id="search-input" 
+                name="q" 
+                class="search-input" 
+                placeholder="Search..." 
+                aria-label="Search"
+              >
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    <div class="page-header">
+      <div class="container">
+        <h1>Preparation Guides</h1>
+        <p>Everything you need to know before your visit</p>
+      </div>
+    </div>
+    
+    <section class="guide-section">
+      <!-- First Visit Guide -->
+      <div class="guide-card">
+        <h3><span class="icon-emoji">📋</span> First Visit Preparation</h3>
+        
+        <h4>Required Documents:</h4>
+        <ul class="checklist">
+          <li><strong>Valid Photo ID</strong> - Passport, driver's license, or national ID card</li>
+          <li><strong>Health Insurance Card</strong> - Current insurance information and policy number</li>
+          <li><strong>Medical History Form</strong> - Available at reception or <a href="./contact.html">download here</a></li>
+          <li><strong>Previous Medical Records</strong> - If available from other healthcare providers</li>
+          <li><strong>List of Current Medications</strong> - Include dosages and frequency</li>
+          <li><strong>Allergy Information</strong> - Complete list of known allergies</li>
+        </ul>
+
+        <div class="highlight-box">
+          <strong>⏰ Arrival Time:</strong>
+          Please arrive <strong>15 minutes early</strong> for your first appointment to complete registration and paperwork.
+        </div>
+
+        <h4>What to Expect:</h4>
+        <ol>
+          <li>Check-in at reception desk</li>
+          <li>Complete registration forms (5-10 minutes)</li>
+          <li>Brief health assessment by nurse</li>
+          <li>Consultation with your doctor (20-30 minutes)</li>
+          <li>Scheduling follow-up appointments if needed</li>
+        </ol>
+      </div>
+
+      <!-- Follow-up Appointments -->
+      <div class="guide-card">
+        <h3><span class="icon-emoji">🔄</span> Follow-up Appointments</h3>
+        
+        <h4>What to Bring:</h4>
+        <ul class="checklist">
+          <li><strong>Insurance Card</strong> - Always required</li>
+          <li><strong>Previous Test Results</strong> - If you received any since last visit</li>
+          <li><strong>Updated Medication List</strong> - Any changes in your prescriptions</li>
+          <li><strong>Symptom Diary</strong> - If requested by your doctor</li>
+        </ul>
+
+        <div class="highlight-box">
+          <strong>⏰ Arrival Time:</strong>
+          Arrive <strong>5-10 minutes early</strong> for follow-up appointments.
+        </div>
+      </div>
+
+      <!-- Diagnostic Tests -->
+      <div class="guide-card">
+        <h3><span class="icon-emoji">🔬</span> Preparing for Diagnostic Tests</h3>
+        
+        <h4>Blood Tests:</h4>
+        <ul>
+          <li><strong>Fasting:</strong> No food or drinks (except water) for 8-12 hours before test</li>
+          <li><strong>Medication:</strong> Take regular medications unless instructed otherwise</li>
+          <li><strong>Hydration:</strong> Drink plenty of water before the test</li>
+        </ul>
+
+        <h4>Imaging Services (X-Ray, CT, MRI):</h4>
+        <ul>
+          <li><strong>Clothing:</strong> Wear comfortable, loose-fitting clothes without metal</li>
+          <li><strong>Jewelry:</strong> Remove all jewelry and metal accessories</li>
+          <li><strong>Pregnancy:</strong> Inform staff if you are or might be pregnant</li>
+          <li><strong>Contrast Studies:</strong> No food/drink 4 hours before if contrast is used</li>
+        </ul>
+
+        <div class="highlight-box">
+          <strong>⏰ Arrival Time:</strong>
+          Arrive <strong>15 minutes early</strong> for all diagnostic procedures.
+        </div>
+      </div>
+
+      <!-- Specialist Consultations -->
+      <div class="guide-card">
+        <h3><span class="icon-emoji">👨‍⚕️</span> Specialist Consultations</h3>
+        
+        <h4>Additional Documents Needed:</h4>
+        <ul class="checklist">
+          <li><strong>Referral Letter</strong> - From your primary care physician (if required)</li>
+          <li><strong>Previous Specialist Reports</strong> - From any other specialists you've seen</li>
+          <li><strong>Relevant Test Results</strong> - X-rays, lab work, scans related to your condition</li>
+          <li><strong>Treatment History</strong> - Details of previous treatments tried</li>
+        </ul>
+
+        <h4>Questions to Prepare:</h4>
+        <ul>
+          <li>Write down your symptoms and when they started</li>
+          <li>List questions you want to ask the specialist</li>
+          <li>Note any treatments that have/haven't worked</li>
+          <li>Bring a family member if you'd like support</li>
+        </ul>
+      </div>
+
+      <!-- Surgery Preparation -->
+      <div class="guide-card">
+        <h3><span class="icon-emoji">⚕️</span> Surgery & Procedures</h3>
+        
+        <h4>Pre-Surgery Requirements:</h4>
+        <ul class="checklist">
+          <li><strong>Pre-operative Assessment</strong> - Complete all required tests beforehand</li>
+          <li><strong>Fasting:</strong> No food/drink after midnight before surgery</li>
+          <li><strong>Medications:</strong> Follow specific instructions from your surgeon</li>
+          <li><strong>Transportation:</strong> Arrange someone to drive you home</li>
+          <li><strong>Comfortable Clothing:</strong> Wear loose, easy-to-remove clothes</li>
+        </ul>
+
+        <div class="highlight-box">
+          <strong>⏰ Arrival Time:</strong>
+          Arrive <strong>2 hours before</strong> scheduled surgery time.
+        </div>
+
+        <h4>What NOT to Bring:</h4>
+        <ul>
+          <li>Jewelry and valuables</li>
+          <li>Contact lenses (bring glasses instead)</li>
+          <li>Nail polish or artificial nails</li>
+          <li>Large amounts of cash</li>
+        </ul>
+      </div>
+
+      <!-- General Tips -->
+      <div class="guide-card">
+        <h3><span class="icon-emoji">💡</span> General Tips for All Visits</h3>
+        
+        <ul class="checklist">
+          <li><strong>Be On Time:</strong> Respect your appointment time to avoid delays</li>
+          <li><strong>Bring Questions:</strong> Write them down so you don't forget</li>
+          <li><strong>Bring a Notebook:</strong> Take notes during your appointment</li>
+          <li><strong>Update Contact Info:</strong> Inform reception of any changes</li>
+          <li><strong>Payment Method:</strong> Bring payment method for co-pays or fees</li>
+          <li><strong>Comfort Items:</strong> Bring a book or device if you expect to wait</li>
+        </ul>
+
+        <div class="highlight-box">
+          <strong>📞 Need Help?</strong>
+          If you have questions about your appointment preparation, call us at <a href="tel:+420111111111" class="primary-link bold-link">+420 111 111 111</a>
+        </div>
+      </div>
+
+      <!-- Cancellation Policy -->
+      <div class="guide-card" class="bordered-warning">
+        <h3><span class="icon-emoji">⚠️</span> Important: Cancellation Policy</h3>
+        
+        <p>We understand that schedules change. If you need to cancel or reschedule:</p>
+        <ul>
+          <li><strong>Notice Required:</strong> Minimum 24 hours advance notice</li>
+          <li><strong>How to Cancel:</strong> Call us or use online booking system</li>
+          <li><strong>Late Cancellation Fee:</strong> May apply for cancellations with less than 24 hours notice</li>
+          <li><strong>No-Show Policy:</strong> Repeated no-shows may affect future booking privileges</li>
+        </ul>
+        
+        <p class="mt-md text-italic">
+          By canceling with proper notice, you allow us to offer your slot to other patients in need.
+        </p>
+      </div>
+    </section>
+
+    <section class="section text-center" class="alt-bg">
+      <div class="container">
+        <h2>Ready for Your Appointment?</h2>
+        <p class="cta-text">
+          Now that you're prepared, book your appointment or contact us with any questions.
+        </p>
+        <div class="flex-center">
+          <a href="./booking.html" class="cta-button">Book Appointment</a>
+          <a href="./contact.html" class="cta-button" class="btn-outline-primary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-about">
+          <h3>About MediCare Plus</h3>
+          <p>Quality healthcare services with compassion and expertise since 2010.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html">Book Appointment</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>Patient Resources</h3>
+          <ul>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="preparation-guides.html">Preparation Guides</a></li>
+            <li><a href="privacy-policy.html">Privacy & Data Protection</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="./contact.html">Emergency</a></li>
+            <li><a href="./departments.html#cardiology">Cardiology</a></li>
+            <li><a href="./departments.html#neurology">Neurology</a></li>
+            <li><a href="./departments.html#pediatrics">Pediatrics</a></li>
+            <li><a href="./departments.html#pharmacy">Pharmacy</a></li>
+            <li><a href="./departments.html#imaging">Imaging</a></li>
+            <li><a href="./departments.html#laboratory">Laboratory</a></li>
+            <li><a href="./departments.html#orthopedics">Orthopedics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact & Hours</h3>
+          <address>
+            <p class="contact-item">
+              <span class="icon">📍</span>
+              <span>123 Healthcare Ave<br>Medical District, MD 12345</span>
+            </p>
+            <p class="contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:+420111111111">+420 111 111 111</a>
+            </p>
+            <p class="contact-item">
+              <span class="icon">✉️</span>
+              <a href="mailto:info@medicareplus.com">info@medicareplus.com</a>
+            </p>
+          </address>
+          
+          <div class="office-hours">
+            <h4>Office Hours</h4>
+            <p><strong>Mon-Fri:</strong> <br/>8:00 AM - 8:00 PM</p>
+            <p><strong>Sat:</strong> <br/>9:00 AM - 5:00 PM</p>
+            <p><strong>Sun:</strong> <br/>Closed</p>
+            <p class="emergency-note"><strong>Emergency:</strong> 24/7</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="student-project-notice">
+        <p><strong>📚 Student Project Notice:</strong> This website is a student project created for educational purposes.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        <p class="footer-authors">Created by: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh</p>
+      </div>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+  </footer>
+  
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navContainer = document.getElementById('nav-container');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navContainer.classList.toggle('active');
+      
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    const navLinks = navContainer.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navContainer.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

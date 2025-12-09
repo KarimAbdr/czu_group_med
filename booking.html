@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book an appointment at MediCare Plus - Schedule your visit with our expert medical team.">
+  <title>Book Appointment - MediCare Plus</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <a href="tel:+420111111111" aria-label="Call us">📞 <span>+420 111 111 111</span></a>
+            <a href="mailto:info@medicareplus.com" aria-label="Email us">✉️ <span>info@medicareplus.com</span></a>
+          </div>
+          <div class="language-selector">
+            <span aria-hidden="true">🌐</span>
+            <select aria-label="Select language">
+              <option value="en">English</option>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content">
+          <a href="./index.html" class="logo" aria-label="MediCare Plus">
+            <div class="logo-icon">M+</div>
+            <strong>MediCare Plus</strong>
+          </a>
+          
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+          
+          <div class ="nav-container" id="nav-container">
+            <nav class="main-nav" aria-label="Main navigation">
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./booking.html" class="active" aria-current="page">Book</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+              </ul>
+            </nav>
+            
+            <form class="search-form" role="search" action="./search-results.html" method="get">
+              <label for="search-input" class="sr-only">Search</label>
+              <input 
+                type="text" 
+                id="search-input" 
+                name="q" 
+                class="search-input" 
+                placeholder="Search..." 
+                aria-label="Search"
+              >
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="./index.html">Home</a></li>
+          <li><span aria-current="page">Book Appointment</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  
+  <main id="main-content">
+    <section class="section" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title" class="section-title">Book Your Appointment</h1>
+        <p class="text-center" class="dept-intro text-center">
+          Schedule your visit in three easy steps
+        </p>
+        
+        <form class="form-section form-container" id="bookingForm">
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">
+              Step 1: Your Information
+            </legend>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="patient-first-name">
+                  First Name <span class="required-mark">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="patient-first-name" 
+                  name="patient-first-name" 
+                  required 
+                  aria-required="true"
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="patient-last-name">
+                  Last Name <span class="required-mark">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="patient-last-name" 
+                  name="patient-last-name" 
+                  required 
+                  aria-required="true"
+                >
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="patient-email">
+                  Email <span class="required-mark">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="patient-email" 
+                  name="patient-email" 
+                  required 
+                  aria-required="true"
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="patient-phone">
+                  Phone <span class="required-mark">*</span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="patient-phone" 
+                  name="patient-phone" 
+                  required 
+                  aria-required="true"
+                  placeholder="+420 111 111 111"
+                >
+              </div>
+            </div>
+          </fieldset>
+          
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">
+              Step 2: Appointment Details
+            </legend>
+            
+            <div class="form-group">
+              <label for="department">
+                Department <span class="required-mark">*</span>
+              </label>
+              <select id="department" name="department" required aria-required="true">
+                <option value="">Select department</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="pediatrics">Pediatrics</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="emergency">Emergency</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="doctor">
+                Doctor <span class="required-mark">*</span>
+              </label>
+              <select id="doctor" name="doctor" required aria-required="true" disabled>
+                <option value="">Select doctor</option>
+              </select>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appointment-date-display">
+                  Date <span class="required-mark">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="appointment-date-display" 
+                  readonly
+                  placeholder="Click to select date"
+                  class="date-input"
+                >
+                <input type="hidden" id="appointment-date" name="appointment-date">
+              </div>
+              
+              <div class="form-group">
+                <label for="appointment-time">
+                  Time <span class="required-mark">*</span>
+                </label>
+                <select id="appointment-time" name="appointment-time" required aria-required="true" disabled>
+                  <option value="">Select time</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="reason-for-visit">
+                Reason for Visit <span class="required-mark">*</span>
+              </label>
+              <textarea 
+                id="reason-for-visit" 
+                name="reason-for-visit" 
+                required 
+                aria-required="true"
+                placeholder="Briefly describe..."
+                class="notes-textarea"
+              ></textarea>
+            </div>
+          </fieldset>
+          
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">
+              Step 3: Confirmation
+            </legend>
+            
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  name="agree-terms" 
+                  id="agree-terms" 
+                  required 
+                  aria-required="true"
+                  class="checkbox-input"
+                >
+                <span>I agree to the appointment terms and understand that I must provide 24 hours notice to cancel</span>
+              </label>
+            </div>
+          </fieldset>
+          
+          <div id="errorMessage" class="error-message"></div>
+          
+          <div id="successMessage" class="success-message"></div>
+          
+          <div class="form-group text-center">
+            <button type="submit" class="submit-button submit-btn-lg">
+              Complete Booking
+            </button>
+            <p class="note-text">
+              You will receive SMS confirmation at the provided phone number
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <aside class="section" class="alt-bg" aria-labelledby="info-title">
+      <div class="container">
+        <h2 id="info-title" class="section-title">Before Your Visit</h2>
+        
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>📋 What to Bring</h3>
+            <ul class="note-list">
+              <li>Photo ID</li>
+              <li>Insurance card</li>
+              <li>Medications list</li>
+              <li>Medical records</li>
+            </ul>
+          </article>
+          
+          <article class="contact-card">
+            <h3>🕐 Arrival</h3>
+            <p>Please arrive 15 minutes early for check-in and paperwork.</p>
+          </article>
+          
+          <article class="contact-card">
+            <h3>❌ Cancellation</h3>
+            <p>Provide 24+ hours notice by calling <a href="tel:+420111111111">+420 111 111 111</a></p>
+          </article>
+          
+          <article class="contact-card">
+            <h3>📞 Questions?</h3>
+            <p>Contact our coordinators at <a href="tel:+420111111111">+420 111 111 111</a></p>
+          </article>
+        </div>
+      </div>
+    </aside>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-about">
+          <h3>About MediCare Plus</h3>
+          <p>Quality healthcare services with compassion and expertise since 2010.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html">Book Appointment</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>Patient Resources</h3>
+          <ul>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="preparation-guides.html">Preparation Guides</a></li>
+            <li><a href="privacy-policy.html">Privacy & Data Protection</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="./contact.html">Emergency</a></li>
+            <li><a href="./departments.html#cardiology">Cardiology</a></li>
+            <li><a href="./departments.html#neurology">Neurology</a></li>
+            <li><a href="./departments.html#pediatrics">Pediatrics</a></li>
+            <li><a href="./departments.html#pharmacy">Pharmacy</a></li>
+            <li><a href="./departments.html#imaging">Imaging</a></li>
+            <li><a href="./departments.html#laboratory">Laboratory</a></li>
+            <li><a href="./departments.html#orthopedics">Orthopedics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact & Hours</h3>
+          <address>
+            <p class="contact-item">
+              <span class="icon">📍</span>
+              <span>123 Healthcare Ave<br>Medical District, MD 12345</span>
+            </p>
+            <p class="contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:+420111111111">+420 111 111 111</a>
+            </p>
+            <p class="contact-item">
+              <span class="icon">✉️</span>
+              <a href="mailto:info@medicareplus.com">info@medicareplus.com</a>
+            </p>
+          </address>
+          
+          <div class="office-hours">
+            <h4>Office Hours</h4>
+            <p><strong>Mon-Fri:</strong> <br/>8:00 AM - 8:00 PM</p>
+            <p><strong>Sat:</strong> <br/>9:00 AM - 5:00 PM</p>
+            <p><strong>Sun:</strong> <br/>Closed</p>
+            <p class="emergency-note"><strong>Emergency:</strong> 24/7</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="student-project-notice">
+        <p><strong>📚 Student Project Notice:</strong> This website is a student project created for educational purposes.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        <p class="footer-authors">Created by: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh</p>
+      </div>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+  </footer>
+
+  <div id="dateModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="modal-back-btn" id="backBtn">←</button>
+        <h2 id="modalTitle">Select Date and Time</h2>
+      </div>
+      
+      <div class="calendar-nav">
+        <button id="prevMonthBtn" type="button">←</button>
+        <div class="month-title" id="monthTitle"></div>
+        <button id="nextMonthBtn" type="button">→</button>
+      </div>
+      
+      <div class="calendar-grid" id="calendarGrid"></div>
+      
+      <div id="timeSection" class="hidden">
+        <h3 class="section-title-mb">Select Time</h3>
+        <div class="time-slots" id="timeSlots"></div>
+      </div>
+      
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" id="cancelBtn">Cancel</button>
+        <button type="button" class="btn-primary" id="confirmBtn" disabled>Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const doctors = {
+      cardiology: [
+        { id: 1, name: 'Dr. Sarah Mitchell', specialty: 'Heart Specialist', times: ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00'] },
+        { id: 2, name: 'Dr. Marcus Johnson', specialty: 'Cardiologist', times: ['09:30', '10:30', '13:00', '14:30', '15:30'] }
+      ],
+      neurology: [
+        { id: 3, name: 'Dr. James Rodriguez', specialty: 'Neurologist', times: ['09:00', '11:00', '13:00', '14:00', '16:00'] },
+        { id: 4, name: 'Dr. Patricia Lee', specialty: 'Neurology Specialist', times: ['10:00', '11:30', '14:00', '15:30', '17:00'] }
+      ],
+      pediatrics: [
+        { id: 5, name: 'Dr. Emily Chen', specialty: 'Pediatrician', times: ['08:00', '09:00', '10:00', '11:00', '14:00', '15:00'] },
+        { id: 6, name: 'Dr. Thomas White', specialty: 'Child Specialist', times: ['09:30', '10:30', '13:00', '14:30', '15:30', '16:30'] }
+      ],
+      orthopedics: [
+        { id: 7, name: 'Dr. Michael Thompson', specialty: 'Orthopedic Surgeon', times: ['09:00', '10:00', '14:00', '15:00', '16:00'] },
+        { id: 8, name: 'Dr. Angela Brown', specialty: 'Joint Specialist', times: ['10:30', '11:30', '13:30', '14:30', '15:30'] }
+      ],
+      emergency: [
+        { id: 9, name: 'Dr. Lisa Anderson', specialty: 'Emergency Specialist', times: ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00'] }
+      ]
+    };
+
+    const departmentSelect = document.getElementById('department');
+    const doctorSelect = document.getElementById('doctor');
+    const dateDisplay = document.getElementById('appointment-date-display');
+    const dateInput = document.getElementById('appointment-date');
+    const timeSelect = document.getElementById('appointment-time');
+    const dateModal = document.getElementById('dateModal');
+    const calendarGrid = document.getElementById('calendarGrid');
+    const monthTitle = document.getElementById('monthTitle');
+    const timeSlots = document.getElementById('timeSlots');
+    const timeSection = document.getElementById('timeSection');
+
+    let currentMonth = new Date();
+    let selectedDate = null;
+    let selectedTime = null;
+    let selectedDoctor = null;
+
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const dayNames = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+    function getToday() {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return today;
+    }
+
+    function renderCalendar() {
+      calendarGrid.innerHTML = '';
+      
+      dayNames.forEach(day => {
+        const dayHeader = document.createElement('div');
+        dayHeader.className = 'day-header';
+        dayHeader.textContent = day;
+        calendarGrid.appendChild(dayHeader);
+      });
+
+      const firstDay = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), 1);
+      const lastDay = new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 0);
+      const prevLastDay = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), 0);
+      
+      // Adjust for Monday as first day of week (0=Sun, 1=Mon, ..., 6=Sat)
+      let firstDayOfWeek = firstDay.getDay() - 1;
+      if (firstDayOfWeek < 0) firstDayOfWeek = 6; // If Sunday, make it 6
+      
+      const lastDateOfMonth = lastDay.getDate();
+      const prevLastDate = prevLastDay.getDate();
+
+      // Previous month dates
+      for (let i = firstDayOfWeek - 1; i >= 0; i--) {
+        const dayCell = document.createElement('div');
+        dayCell.className = 'day-cell other-month disabled';
+        dayCell.textContent = prevLastDate - i;
+        calendarGrid.appendChild(dayCell);
+      }
+
+      const today = getToday();
+
+      // Current month dates
+      for (let date = 1; date <= lastDateOfMonth; date++) {
+        const dayCell = document.createElement('div');
+        dayCell.className = 'day-cell';
+        dayCell.textContent = date;
+
+        const currentDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), date);
+        currentDate.setHours(0, 0, 0, 0);
+        
+        const dayOfWeek = currentDate.getDay();
+        const isSunday = (dayOfWeek === 0); // Sunday
+
+        if (currentDate < today || isSunday) {
+          dayCell.classList.add('disabled');
+        } else {
+          dayCell.addEventListener('click', () => selectDate(currentDate));
+          
+          if (selectedDate && currentDate.toDateString() === selectedDate.toDateString()) {
+            dayCell.classList.add('selected');
+          }
+        }
+
+        calendarGrid.appendChild(dayCell);
+      }
+
+      // Next month dates
+      for (let i = 1; i <= (42 - firstDayOfWeek - lastDateOfMonth); i++) {
+        const dayCell = document.createElement('div');
+        dayCell.className = 'day-cell other-month disabled';
+        dayCell.textContent = i;
+        calendarGrid.appendChild(dayCell);
+      }
+    }
+
+    function selectDate(date) {
+      selectedDate = new Date(date);
+      selectedTime = null;
+      renderCalendar();
+      renderTimeSlots();
+      timeSection.style.display = 'block';
+    }
+
+    function renderTimeSlots() {
+      timeSlots.innerHTML = '';
+      
+      if (!selectedDoctor) return;
+
+      const doctorData = doctors[departmentSelect.value].find(d => d.id === parseInt(selectedDoctor));
+      if (!doctorData) return;
+
+      doctorData.times.forEach(time => {
+        const slot = document.createElement('button');
+        slot.type = 'button';
+        slot.className = 'time-slot';
+        slot.textContent = time;
+        
+        if (selectedTime === time) {
+          slot.classList.add('selected');
+        }
+        
+        slot.addEventListener('click', (e) => {
+          e.preventDefault();
+          selectedTime = time;
+          renderTimeSlots();
+          document.getElementById('confirmBtn').disabled = false;
+        });
+        
+        timeSlots.appendChild(slot);
+      });
+    }
+
+    departmentSelect.addEventListener('change', () => {
+      doctorSelect.innerHTML = '<option value="">Select doctor</option>';
+      doctorSelect.disabled = !departmentSelect.value;
+      dateDisplay.value = '';
+      dateInput.value = '';
+      timeSelect.innerHTML = '<option value="">Select time</option>';
+      timeSelect.disabled = true;
+      selectedDate = null;
+      selectedTime = null;
+
+      if (departmentSelect.value) {
+        doctors[departmentSelect.value].forEach(doctor => {
+          const option = document.createElement('option');
+          option.value = doctor.id;
+          option.textContent = `${doctor.name} - ${doctor.specialty}`;
+          doctorSelect.appendChild(option);
+        });
+      }
+    });
+
+    doctorSelect.addEventListener('change', () => {
+      selectedDoctor = doctorSelect.value;
+      dateDisplay.value = '';
+      dateInput.value = '';
+      timeSelect.innerHTML = '<option value="">Select time</option>';
+      timeSelect.disabled = true;
+      selectedDate = null;
+      selectedTime = null;
+    });
+
+    dateDisplay.addEventListener('click', () => {
+      if (!selectedDoctor) {
+        alert('Please select a doctor first');
+        return;
+      }
+      currentMonth = new Date();
+      selectedDate = null;
+      selectedTime = null;
+      renderCalendar();
+      monthTitle.textContent = `${monthNames[currentMonth.getMonth()]} ${currentMonth.getFullYear()}`;
+      timeSection.style.display = 'none';
+      dateModal.classList.add('active');
+    });
+
+    document.getElementById('prevMonthBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      currentMonth.setMonth(currentMonth.getMonth() - 1);
+      renderCalendar();
+      monthTitle.textContent = `${monthNames[currentMonth.getMonth()]} ${currentMonth.getFullYear()}`;
+    });
+
+    document.getElementById('nextMonthBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      currentMonth.setMonth(currentMonth.getMonth() + 1);
+      renderCalendar();
+      monthTitle.textContent = `${monthNames[currentMonth.getMonth()]} ${currentMonth.getFullYear()}`;
+    });
+
+    document.getElementById('backBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      dateModal.classList.remove('active');
+    });
+
+    document.getElementById('cancelBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      dateModal.classList.remove('active');
+    });
+
+    document.getElementById('confirmBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      if (selectedDate && selectedTime) {
+        const dateStr = selectedDate.toISOString().split('T')[0];
+        const dayName = dayNames[selectedDate.getDay()];
+        const monthName = monthNames[selectedDate.getMonth()];
+        
+        dateInput.value = dateStr;
+        dateDisplay.value = `${dayName}, ${selectedDate.getDate()}/${selectedDate.getMonth() + 1}/${selectedDate.getFullYear()}`;
+        timeSelect.innerHTML = '<option value="">Select time</option>';
+        
+        const doctorData = doctors[departmentSelect.value].find(d => d.id === parseInt(selectedDoctor));
+        doctorData.times.forEach(time => {
+          const option = document.createElement('option');
+          option.value = time;
+          option.textContent = time;
+          if (time === selectedTime) {
+            option.selected = true;
+          }
+          timeSelect.appendChild(option);
+        });
+        
+        timeSelect.disabled = false;
+        timeSelect.value = selectedTime;
+        dateModal.classList.remove('active');
+      }
+    });
+
+    document.getElementById('bookingForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const errorMsg = document.getElementById('errorMessage');
+      const successMsg = document.getElementById('successMessage');
+      errorMsg.style.display = 'none';
+      successMsg.style.display = 'none';
+
+      if (!departmentSelect.value || !doctorSelect.value || !dateInput.value || !timeSelect.value) {
+        errorMsg.textContent = 'Please fill in all required fields';
+        errorMsg.style.display = 'block';
+        return;
+      }
+
+      successMsg.textContent = 'Appointment booked successfully! Check your email for confirmation.';
+      successMsg.style.display = 'block';
+      document.getElementById('bookingForm').reset();
+      doctorSelect.disabled = true;
+      timeSelect.disabled = true;
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+      }, 5000);
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navContainer = document.getElementById('nav-container');
+    menuToggle.addEventListener('click', () => {
+      navContainer.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', 
+        menuToggle.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'
+      );
+    });
+
+    const navLinks = navContainer.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navContainer.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

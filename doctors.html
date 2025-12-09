@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet our team of expert doctors at MediCare Plus. Browse specialists in various departments.">
+  <title>Our Doctors - MediCare Plus</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <a href="tel:+420111111111" aria-label="Call us">📞 <span>+420 111 111 111</span></a>
+            <a href="mailto:info@medicareplus.com" aria-label="Email us">✉️ <span>info@medicareplus.com</span></a>
+          </div>
+          <div class="language-selector">
+            <span aria-hidden="true">🌐</span>
+            <select aria-label="Select language">
+              <option value="en">English</option>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content">
+          <a href="./index.html" class="logo" aria-label="MediCare Plus">
+            <div class="logo-icon">M+</div>
+            <strong>MediCare Plus</strong>
+          </a>
+          
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+          
+          <div class ="nav-container" id="nav-container">
+            <nav class="main-nav" aria-label="Main navigation">
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./doctors.html" class="active" aria-current="page">Doctors</a></li>
+                <li><a href="./booking.html">Book</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+              </ul>
+            </nav>
+            
+            <form class="search-form" role="search" action="./search-results.html" method="get">
+              <label for="search-input" class="sr-only">Search</label>
+              <input 
+                type="text" 
+                id="search-input" 
+                name="q" 
+                class="search-input" 
+                placeholder="Search..." 
+                aria-label="Search"
+              >
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="./index.html">Home</a></li>
+          <li><span aria-current="page">Doctors</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  
+  <main id="main-content">
+    <section class="section" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title" class="section-title">Our Medical Team</h1>
+        <p class="text-center" class="dept-intro text-center">
+          Board-certified physicians and specialists dedicated to your health
+        </p>
+        
+        <div class="doctors-list">
+          <article class="doctor-card">
+            <img 
+              src="https://img.freepik.com/free-photo/female-doctor-hospital-with-stethoscope_23-2148827774.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="Dr. Sarah Mitchell"
+              class="doctor-image"
+            >
+            <div class="doctor-info">
+              <h2 class="doctor-name">Dr. Sarah Mitchell</h2>
+              <span class="doctor-specialty">Cardiology</span>
+              <p class="doctor-description">
+                15+ years treating cardiovascular diseases with advanced diagnostic techniques
+              </p>
+              <div class="doctor-meta">
+                <div class="meta-item">🎓 Harvard Medical School</div>
+                <div class="meta-item">⭐ 4.9/5 Rating</div>
+              </div>
+              <p class="profile-action">
+                <a href="./doctor-detail.html?id=sarah-mitchell" class="button-secondary">View Profile</a>
+              </p>
+            </div>
+          </article>
+          
+          <article class="doctor-card">
+            <img 
+              src="https://media.sciencephoto.com/image/f0265219/800wm"
+              alt="Dr. James Rodriguez"
+              class="doctor-image"
+            >
+            <div class="doctor-info">
+              <h2 class="doctor-name">Dr. James Rodriguez</h2>
+              <span class="doctor-specialty">Neurology</span>
+              <p class="doctor-description">
+                Expert in neurological disorders with patient-centered approach
+              </p>
+              <div class="doctor-meta">
+                <div class="meta-item">🎓 Johns Hopkins University</div>
+                <div class="meta-item">⭐ 4.8/5 Rating</div>
+              </div>
+              <p class="profile-action">
+                <a href="./doctor-detail.html?id=james-rodriguez" class="button-secondary">View Profile</a>
+              </p>
+            </div>
+          </article>
+          
+          <article class="doctor-card">
+            <img 
+              src="https://png.pngtree.com/png-clipart/20250417/original/pngtree-female-doctor-portrait-in-white-png-image_20827701.png"
+              alt="Dr. Emily Chen"
+              class="doctor-image"
+            >
+            <div class="doctor-info">
+              <h2 class="doctor-name">Dr. Emily Chen</h2>
+              <span class="doctor-specialty">Pediatrics</span>
+              <p class="doctor-description">
+                Compassionate care for children with focus on developmental health
+              </p>
+              <div class="doctor-meta">
+                <div class="meta-item">🎓 Stanford Medical School</div>
+                <div class="meta-item">⭐ 4.9/5 Rating</div>
+              </div>
+              <p class="profile-action">
+                <a href="./doctor-detail.html?id=emily-chen" class="button-secondary">View Profile</a>
+              </p>
+            </div>
+          </article>
+          
+          <article class="doctor-card">
+            <img 
+              src="https://www.shutterstock.com/image-photo/healthcare-medical-staff-concept-portrait-600nw-2281024823.jpg"
+              alt="Dr. Michael Thompson"
+              class="doctor-image"
+            >
+            <div class="doctor-info">
+              <h2 class="doctor-name">Dr. Michael Thompson</h2>
+              <span class="doctor-specialty">Orthopedics</span>
+              <p class="doctor-description">
+                18+ years in sports medicine and joint replacement surgery
+              </p>
+              <div class="doctor-meta">
+                <div class="meta-item">🎓 Yale School of Medicine</div>
+                <div class="meta-item">⭐ 4.8/5 Rating</div>
+              </div>
+              <p class="profile-action">
+                <a href="./doctor-detail.html?id=michael-thompson" class="button-secondary">View Profile</a>
+              </p>
+            </div>
+          </article>
+          
+          <article class="doctor-card">
+            <img 
+              src="https://images.pexels.com/photos/19596247/pexels-photo-19596247.jpeg?cs=srgb&dl=pexels-martins-john-572778471-19596247.jpg&fm=jpg"
+              alt="Dr. Lisa Anderson"
+              class="doctor-image"
+            >
+            <div class="doctor-info">
+              <h2 class="doctor-name">Dr. Lisa Anderson</h2>
+              <span class="doctor-specialty">Emergency Medicine</span>
+              <p class="doctor-description">
+                Head of emergency department with 14+ years trauma care experience
+              </p>
+              <div class="doctor-meta">
+                <div class="meta-item">🎓 Columbia University</div>
+                <div class="meta-item">⭐ 4.9/5 Rating</div>
+              </div>
+              <p class="profile-action">
+                <a href="./doctor-detail.html?id=lisa-anderson" class="button-secondary">View Profile</a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section text-center" class="alt-bg">
+      <div class="container">
+        <h2 class="section-title">Ready to Book?</h2>
+        <p class="cta-text">Choose your preferred doctor and schedule an appointment today</p>
+        <a href="./booking.html" class="cta-button">Book Appointment</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-about">
+          <h3>About MediCare Plus</h3>
+          <p>Quality healthcare services with compassion and expertise since 2010.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./doctors.html">Doctors</a></li>
+              <li><a href="./booking.html">Book Appointment</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>Patient Resources</h3>
+          <ul>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="preparation-guides.html">Preparation Guides</a></li>
+            <li><a href="privacy-policy.html">Privacy & Data Protection</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="./contact.html">Emergency</a></li>
+            <li><a href="./departments.html#cardiology">Cardiology</a></li>
+            <li><a href="./departments.html#neurology">Neurology</a></li>
+            <li><a href="./departments.html#pediatrics">Pediatrics</a></li>
+            <li><a href="./departments.html#pharmacy">Pharmacy</a></li>
+            <li><a href="./departments.html#imaging">Imaging</a></li>
+            <li><a href="./departments.html#laboratory">Laboratory</a></li>
+            <li><a href="./departments.html#orthopedics">Orthopedics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact & Hours</h3>
+          <address>
+            <p class="contact-item">
+              <span class="icon">📍</span>
+              <span>123 Healthcare Ave<br>Medical District, MD 12345</span>
+            </p>
+            <p class="contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:+420111111111">+420 111 111 111</a>
+            </p>
+            <p class="contact-item">
+              <span class="icon">✉️</span>
+              <a href="mailto:info@medicareplus.com">info@medicareplus.com</a>
+            </p>
+          </address>
+          
+          <div class="office-hours">
+            <h4>Office Hours</h4>
+            <p><strong>Mon-Fri:</strong> <br/>8:00 AM - 8:00 PM</p>
+            <p><strong>Sat:</strong> <br/>9:00 AM - 5:00 PM</p>
+            <p><strong>Sun:</strong> <br/>Closed</p>
+            <p class="emergency-note"><strong>Emergency:</strong> 24/7</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="student-project-notice">
+        <p><strong>📚 Student Project Notice:</strong> This website is a student project created for educational purposes.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        <p class="footer-authors">Created by: Aarush Wagdarikar, Karim Abdrakhmanov, Gulzada Oskonbaeva, Phong Pham Minh</p>
+      </div>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navContainer = document.getElementById('nav-container');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navContainer.classList.toggle('active');
+      
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    const navLinks = navContainer.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navContainer.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
